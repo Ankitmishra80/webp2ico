@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================================================= -->
+  <!--  SEO TITLE, DESCRIPTION & SOCIAL (long-tail keywords)     -->
+  <!-- ========================================================= -->
+  <title>Terms of Service – Bulk WebP to ICO Converter</title>
+  <meta name="description" content="Terms of service for the free Bulk WebP to ICO converter. Browser-based utility that converts WebP images to ICO icons locally. Understand usage terms, liability limits, acceptable use, and intellectual property before using the tool.">
+  <link rel="canonical" href="https://webp2ico.com/terms.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WebP to ICO Converter">
+  <meta property="og:title" content="Terms of Service – Bulk WebP to ICO Converter">
+  <meta property="og:description" content="Simple, fair terms for a free, local, browser-based WebP to ICO converter. Read our liability, acceptable use, and intellectual property clauses.">
+  <meta property="og:url" content="https://webp2ico.com/terms.html">
+  <meta property="og:image" content="https://webp2ico.com/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://webp2ico.com/og-image.png">
+
+  <!-- Structured data: breadcrumbs for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Bulk WebP to ICO Converter", "item": "https://webp2ico.com/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://webp2ico.com/terms.html" }
+    ]
+  }
+  </script>
+
+  <!-- ========================================================= -->
+  <!--  GOOGLE ANALYTICS (gtag.js) — PLACEHOLDER, DISABLED        -->
+  <!--  Insert your real GA4 Measurement ID below, then remove    -->
+  <!--  the comment markers to enable. Do NOT ship bogus tags.    -->
+  <!-- ========================================================= -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- ========================================================= -->
+  <!--  GOOGLE ADSENSE — PLACEHOLDER (activate only after approval) -->
+  <!-- ========================================================= -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+
+  <style>
+    /* =========================================================
+       SHARED DESIGN SYSTEM — mirrors index.html exactly
+    ========================================================= */
+    :root {
+      --aws-navy: #131a33;
+      --aws-navy-2: #1a2345;
+      --aws-navy-3: #232e5c;
+      --aws-orange: #ff9900;
+      --aws-orange-dark: #e68a00;
+      --aws-teal: #00a8b4;
+      --aws-blue: #37a1e0;
+      --aws-text-dark: #161b2e;
+      --aws-text-light: #d5dbe6;
+      --aws-muted: #93a1bd;
+      --aws-card: #ffffff;
+      --aws-border: #e2e6ef;
+      --radius: 12px;
+      --shadow: 0 12px 34px rgba(19,26,51,.18);
+      --shadow-sm: 0 4px 14px rgba(19,26,51,.10);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:90px; -webkit-text-size-adjust:100%; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--aws-navy); color: var(--aws-text-light); line-height:1.65;
+      overflow-x:hidden;
+    }
+    a { color: var(--aws-teal); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+    /* ---- Header (same as index) ---- */
+    header {
+      position:sticky; top:0; z-index:60;
+      background:rgba(19,26,51,.82);
+      -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08); padding:14px 0;
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .brand { display:flex; align-items:center; gap:11px; font-weight:800; font-size:1.08rem; color:#fff; text-decoration:none !important; letter-spacing:.2px; }
+    .brand:hover { color:#fff; }
+    .brand .squirrel {
+      width:36px; height:36px; border-radius:8px; background:var(--aws-orange);
+      display:grid; place-items:center; color:#1a1300; font-weight:900; font-size:.66rem;
+      box-shadow:0 3px 10px rgba(255,153,0,.35); transition:transform .25s ease;
+    }
+    .brand:hover .squirrel { transform:rotate(-8deg) scale(1.05); }
+    .nav-links a {
+      color:var(--aws-muted); text-decoration:none !important; font-size:.92rem;
+      margin-left:20px; padding:6px 2px; position:relative; transition:color .2s;
+    }
+    .nav-links a::after {
+      content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
+      background:var(--aws-orange); transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color:#fff; }
+    .nav-links a:hover::after, .nav-links a.active::after { transform:scaleX(1); }
+
+    /* ---- Compact page hero ---- */
+    .page-hero { position:relative; text-align:center; padding:52px 0 32px; overflow:hidden; }
+    .page-hero::before, .page-hero::after {
+      content:""; position:absolute; width:420px; height:420px; border-radius:50%;
+      filter:blur(70px); pointer-events:none; animation:drift 12s ease-in-out infinite alternate;
+    }
+    .page-hero::before { background:rgba(255,153,0,.16); top:-160px; left:-120px; }
+    .page-hero::after  { background:rgba(0,168,180,.14); bottom:-200px; right:-140px; animation-delay:4s; }
+    @keyframes drift { from{transform:translate(0,0) scale(1)} to{transform:translate(40px,30px) scale(1.15)} }
+    .page-hero .eyebrow {
+      display:inline-flex; align-items:center; gap:8px; background:rgba(255,153,0,.12);
+      border:1px solid rgba(255,153,0,.35); color:var(--aws-orange);
+      font-size:.78rem; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
+      padding:7px 16px; border-radius:999px; margin-bottom:18px;
+    }
+    .page-hero .eyebrow .dot {
+      width:7px; height:7px; border-radius:50%; background:var(--aws-orange);
+      box-shadow:0 0 8px var(--aws-orange); animation:pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+    .page-hero h1 {
+      font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.12; color:#fff; font-weight:800;
+      letter-spacing:-.5px; margin-bottom:14px;
+    }
+    .page-hero h1 .grad {
+      background:linear-gradient(90deg, var(--aws-orange), var(--aws-teal));
+      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:var(--aws-orange);
+    }
+    .page-hero p.lead { color:var(--aws-muted); max-width:680px; margin:0 auto; font-size:1.05rem; }
+    .pill-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:22px; }
+    .pill {
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
+      padding:7px 14px; border-radius:999px; font-size:.82rem; color:var(--aws-text-light);
+      transition:transform .2s ease, border-color .2s ease;
+    }
+    .pill:hover { transform:translateY(-2px); border-color:rgba(255,153,0,.5); }
+
+    /* =========================================================
+       TWO-COLUMN LAYOUT — sticky TOC + content (fills screen)
+    ========================================================= */
+    .layout {
+      max-width:1200px; margin:0 auto; padding:10px 24px 60px;
+      display:grid; grid-template-columns: 270px 1fr; gap:34px; align-items:start;
+    }
+    .toc {
+      position:sticky; top:88px;
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.09);
+      border-left:3px solid var(--aws-orange); border-radius:12px; padding:18px 16px;
+      max-height:calc(100vh - 110px); overflow:auto;
+    }
+    .toc-label {
+      font-size:.74rem; font-weight:800; letter-spacing:.4px; text-transform:uppercase;
+      color:var(--aws-orange); margin-bottom:12px; display:flex; align-items:center; gap:7px;
+    }
+    .toc-label::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--aws-orange); box-shadow:0 0 8px var(--aws-orange); animation:pulse 2s ease-in-out infinite; }
+    .toc-links { list-style:none; }
+    .toc-links li { margin-bottom:2px; }
+    .toc-links a {
+      display:flex; align-items:center; gap:9px;
+      color:var(--aws-muted); text-decoration:none !important; font-size:.88rem;
+      padding:7px 9px; border-radius:8px; transition:color .18s, background .18s;
+    }
+    .toc-links a .tnum {
+      flex:0 0 auto; width:22px; height:22px; border-radius:50%;
+      background:rgba(255,255,255,.08); color:var(--aws-text-light); font-size:.7rem; font-weight:800;
+      display:grid; place-items:center; transition:background .18s, color .18s;
+    }
+    .toc-links a:hover { color:#fff; background:rgba(255,255,255,.07); }
+    .toc-links a.current { color:#fff; background:rgba(255,153,0,.16); }
+    .toc-links a.current .tnum { background:var(--aws-orange); color:#1a1300; }
+    .toc-cta { margin-top:14px; padding-top:12px; border-top:1px solid rgba(255,255,255,.1); text-align:center; }
+    .toc-cta a.btn-mini {
+      display:inline-block; background:var(--aws-orange); color:#1a1300;
+      font-size:.8rem; font-weight:800; padding:9px 14px; border-radius:8px; text-decoration:none !important;
+      transition:background .18s, transform .1s;
+    }
+    .toc-cta a.btn-mini:hover { background:var(--aws-orange-dark); transform:translateY(-1px); }
+
+    .legal { display:grid; gap:18px; }
+    .content-card {
+      background:var(--aws-card); color:var(--aws-text-dark); border-radius:var(--radius);
+      border:1px solid var(--aws-border); border-top:3px solid var(--aws-orange);
+      box-shadow:var(--shadow-sm); padding:22px 26px; scroll-margin-top:100px;
+      transition:transform .22s ease, box-shadow .22s ease;
+    }
+    .content-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+    .content-card h2 { display:flex; align-items:center; gap:12px; font-size:1.14rem; color:var(--aws-text-dark); margin-bottom:12px; }
+    .content-card .sec-ico { font-size:1.15rem; flex:0 0 auto; }
+    .content-card p { margin-bottom:10px; font-size:.96rem; color:#3c4862; }
+    .content-card p:last-child { margin-bottom:0; }
+    .content-card a { color:#0b7285; font-weight:600; }
+    .content-card a:hover { text-decoration:underline; }
+
+    /* Callout */
+    .callout {
+      background:#fff7e6; border:1px solid #ffd58a; border-radius:10px;
+      padding:15px 17px; margin:-2px 0 8px; font-size:.95rem; color:#5b4a1a;
+      display:flex; gap:12px; align-items:flex-start;
+    }
+    .callout.warn { background:#fff0f0; border-color:#ffc4c4; color:#6b2525; }
+    .callout .co-ico { font-size:1.25rem; line-height:1.2; }
+
+    /* ---- Scroll reveal ---- */
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    /* ---- Footer ---- */
+    footer { border-top:1px solid rgba(255,255,255,.08); padding:32px 0 44px; text-align:center; color:var(--aws-muted); font-size:.88rem; }
+    footer a { color:var(--aws-muted); text-decoration:underline; }
+    footer a:hover { color:var(--aws-orange); }
+    footer .squirrel-mini {
+      width:26px; height:26px; border-radius:6px; background:var(--aws-orange); color:#1a1300;
+      font-weight:900; font-size:.5rem; display:inline-grid; place-items:center; margin-bottom:8px;
+    }
+    .foot-links { margin-top:10px; }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      *, *::before, *::after { animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important; }
+      .reveal { opacity:1; transform:none; }
+    }
+
+    /* Responsive */
+    @media (max-width:960px){
+      .layout { grid-template-columns:1fr; gap:22px; }
+      .toc { position:static; max-height:none; overflow:visible; }
+      .toc-links { display:flex; flex-wrap:wrap; gap:4px; }
+      .toc-links li { margin-bottom:0; }
+      .toc-links a { padding:6px 10px; font-size:.84rem; }
+      .toc-cta { display:none; }
+    }
+    @media (max-width:600px){
+      .nav-links a { margin-left:12px; font-size:.85rem; }
+      .content-card { padding:18px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="squirrel">.ico</span> WebP&nbsp;to&nbsp;ICO Converter</a>
+      <nav class="nav-links">
+        <a href="index.html">Converter</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html" class="active">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero container">
+    <div class="eyebrow"><span class="dot"></span> Terms of Service</div>
+    <h1>Simple, fair, <span class="grad">zero-risk</span> terms.</h1>
+    <p class="lead">The Bulk WebP to ICO converter is free, local, and provided "as is". Read the key points below — especially the liability section.</p>
+    <div class="pill-row">
+      <span class="pill">📄 12 Clauses</span>
+      <span class="pill">🛡️ Use at Your Own Risk</span>
+      <span class="pill">🔒 Local Processing</span>
+    </div>
+  </section>
+
+  <!-- ================= TWO-COLUMN BODY ================= -->
+  <div class="layout">
+    <!-- Sticky table of contents -->
+    <aside class="toc" id="toc">
+      <div class="toc-label">On this page</div>
+      <ul class="toc-links">
+        <li><a href="#terms-1"><span class="tnum">01</span> Description</a></li>
+        <li><a href="#terms-2"><span class="tnum">02</span> Acceptance</a></li>
+        <li><a href="#terms-3"><span class="tnum">03</span> No Warranty</a></li>
+        <li><a href="#terms-4"><span class="tnum">04</span> Limitation of Liability</a></li>
+        <li><a href="#terms-5"><span class="tnum">05</span> Output Files</a></li>
+        <li><a href="#terms-6"><span class="tnum">06</span> Acceptable Use</a></li>
+        <li><a href="#terms-7"><span class="tnum">07</span> Intellectual Property</a></li>
+        <li><a href="#terms-8"><span class="tnum">08</span> Advertising</a></li>
+        <li><a href="#terms-9"><span class="tnum">09</span> Third-Party Links</a></li>
+        <li><a href="#terms-10"><span class="tnum">10</span> Termination</a></li>
+        <li><a href="#terms-11"><span class="tnum">11</span> Governing Law</a></li>
+      </ul>
+      <div class="toc-cta">
+        <a href="index.html" class="btn-mini">⚡ Convert WebP → ICO</a>
+      </div>
+    </aside>
+
+    <!-- Content cards -->
+    <main class="legal">
+      <div class="content-card reveal" id="terms-1">
+        <h2><span class="sec-ico">🛠️</span> 1. Description of the Service</h2>
+        <p>By accessing or using the <strong>Bulk WebP to ICO Converter</strong> website ("the Service"), you agree to be bound by these terms. The Service is a free, browser-based utility that converts WebP image files into ICO icon files locally on your device using the HTML5 Canvas API and the JSZip library. No files are uploaded to any server.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-2">
+        <h2><span class="sec-ico">✍️</span> 2. Acceptance of Terms</h2>
+        <p>Your use of the Service indicates your acceptance of these Terms of Service, our <a href="privacy.html">Privacy Policy</a>, and any other policies or notices posted on the website. We may modify these terms at any time; the most current version will always be available on this page.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-3">
+        <h2><span class="sec-ico">⚠️</span> 3. No Warranty; Use at Your Own Risk</h2>
+        <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis, without warranties of any kind — express or implied, including merchantability, fitness for a particular purpose, accuracy, or non-infringement. We make no guarantee the Service will be uninterrupted, secure, error-free, or that results will be accurate or reliable.</p>
+        <div class="callout warn">
+          <span class="co-ico">⚠️</span>
+          <span><strong>You use this tool entirely at your own risk.</strong> Conversion runs locally on your device, and we cannot guarantee every output file is compatible with every operating system, application, or platform.</span>
+        </div>
+      </div>
+
+      <div class="content-card reveal" id="terms-4">
+        <h2><span class="sec-ico">🛡️</span> 4. Limitation of Liability</h2>
+        <p>In no event shall the site owner, operators, or affiliates be liable for any direct, indirect, incidental, special, consequential, or punitive damages, or any loss of data, profits, or goodwill — whether arising from use of or inability to use the Service, even if advised of the possibility of such damages. In no event shall total aggregate liability exceed the amount paid (if any) by you to use the Service.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-5">
+        <h2><span class="sec-ico">📦</span> 5. No Liability for Output Files</h2>
+        <p>The files produced by this converter are generated locally from user-supplied input. We are not responsible for how the files are used, their suitability for any purpose, or any loss or damage from using them. You are solely responsible for verifying output files meet your requirements and for backing up your original data.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-6">
+        <h2><span class="sec-ico">⚖️</span> 6. Acceptable Use</h2>
+        <p>You agree not to use the Service in any way that: (a) violates any applicable law or regulation; (b) infringes the rights of third parties, including copyright or trademark rights; (c) attempts to disrupt, overload, or impair the Service; or (d) is used for any unlawful or harmful purpose.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-7">
+        <h2><span class="sec-ico">©️</span> 7. Intellectual Property</h2>
+        <p>All original content on this website — including text, design, layout, and code — is the property of the site owner unless otherwise noted and is protected by applicable laws. You may not reproduce, copy, sell, or exploit any part of the Service without prior written permission. You retain all rights to the image files you provide and the output you generate.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-8">
+        <h2><span class="sec-ico">📢</span> 8. Advertising</h2>
+        <p>The Service is monetized through third-party advertising, including Google AdSense. Third-party advertisers may serve ads and use their own cookies under their own policies. We are not responsible for the content or practices of any third-party advertisers or links from the Service.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-9">
+        <h2><span class="sec-ico">🔗</span> 9. Third-Party Links</h2>
+        <p>The Service may contain links to third-party websites. We do not control and are not responsible for the content, policies, or practices of any third-party sites. Accessing such links is at your own discretion and risk.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-10">
+        <h2><span class="sec-ico">⏹️</span> 10. Termination</h2>
+        <p>We reserve the right to restrict, suspend, or terminate access to the Service at our sole discretion, with or without notice and without liability, for any reason including violation of these terms.</p>
+      </div>
+
+      <div class="content-card reveal" id="terms-11">
+        <h2><span class="sec-ico">🏛️</span> 11. Governing Law</h2>
+        <p>These terms are governed by and construed in accordance with the laws of the jurisdiction in which the site owner operates, without regard to conflict-of-law principles. Any disputes arising from these terms or the use of the Service are subject to the exclusive jurisdiction of the courts of that jurisdiction.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="squirrel-mini">.ico</div>
+      <p><strong>WebP to ICO Converter</strong> — a free, private, browser-based converter for game developers, web developers, and designers.</p>
+      <p class="foot-links">
+        <a href="about.html">About</a> &nbsp;·&nbsp;
+        <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="terms.html">Terms of Service</a>
+      </p>
+      <p style="margin-top:10px; font-size:.8rem;">Last updated: September 7, 2026 · Files are processed locally and never uploaded.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Scroll-reveal */
+    (function initReveal(){
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      if (!('IntersectionObserver' in window)){ els.forEach(function(el){ el.classList.add('visible'); }); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
+      }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
+      els.forEach(function(el){ io.observe(el); });
+    })();
+
+    /* Scroll-spy */
+    (function initSpy(){
+      var links = document.querySelectorAll('.toc-links a');
+      if (!links.length || !('IntersectionObserver' in window)) return;
+      var sections = [];
+      links.forEach(function(a){
+        var id = a.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ el: el, link: a });
+      });
+      var spy = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (!en.isIntersecting) return;
+          links.forEach(function(l){ l.classList.remove('current'); });
+          var hit = sections.find(function(s){ return s.el === en.target; });
+          if (hit) hit.link.classList.add('current');
+        });
+      }, { rootMargin:'-20% 0px -70% 0px', threshold:0 });
+      sections.forEach(function(s){ spy.observe(s.el); });
+    })();
+  </script>
+</body>
+</html>

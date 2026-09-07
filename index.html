@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================= -->
+  <!--  PRIMARY SEO TITLE & META TAG -->
+  <!-- ============================= -->
+  <title>WebP to ICO Converter – Free Bulk ICO Icon Converter</title>
+  <meta name="description" content="Free in-browser WebP to ICO converter. Convert one or many WebP images into multi-size ICO icons and favicons, then download a ZIP. No uploads, no sign-up.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WebP to ICO Converter">
+  <meta property="og:title" content="WebP to ICO Converter – Free Bulk ICO Icon Converter">
+  <meta property="og:description" content="Convert batches of WebP images to ICO icons and favicons in seconds. Everything stays on your device — nothing is uploaded to any server.">
+  <meta property="og:url" content="https://webp2ico.com/">
+  <meta property="og:image" content="https://webp2ico.com/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://webp2ico.com/og-image.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://webp2ico.com/">
+
+  <!-- Favicon (inline SVG, no extra request) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FF9900'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='15' fill='white' text-anchor='middle'%3E.ico%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUElEQVR42u3PMQ0AIBDA0Jv+f0bDgQEOqJt9dr1mhomhqsA0YzIPfyd8PLAucZ1s1iqt9nTv9Zz4+7+shxQ1pAAB8AAAAAAAAD///8f3HUSd6e+q+0AAAAASUVORK5CYII=">
+
+  <!-- ========================================================= -->
+  <!--  STRUCTURED DATA (JSON-LD)                                 -->
+  <!-- ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "WebP to ICO Converter",
+    "operatingSystem": "Any web browser with Canvas support",
+    "applicationCategory": "UtilitiesApplication",
+    "applicationSubCategory": "Image Converter",
+    "description": "Free browser-based bulk WebP to ICO converter. Convert single or multiple WebP images into multi-size ICO icons and favicons 100% locally in your browser, with no upload and no sign-up.",
+    "featureList": [
+      "Bulk WebP to ICO conversion",
+      "Single, multiple, or all ICO sizes (16-256 px)",
+      "ICO favicon generator with PNG exports",
+      "Individual download and ZIP download",
+      "100% client-side local processing"
+    ],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are my WebP images uploaded to a server?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. This is a fully client-side tool. Your files are read, resized, and packaged entirely inside your browser using the HTML5 Canvas API and the JSZip library. Nothing is ever transmitted over the internet." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the converter free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no sign-up, no watermark, and no fee. The website is supported by display advertising, so processing and downloads are free forever." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many files can I convert at once?",
+        "acceptedAnswer": { "@type": "Answer", "text": "There is no fixed limit. Because processing is local, your only constraints are your browser's memory and your device's performance. Progress updates live so the UI never appears frozen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which ICO size should I choose?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For website favicons, 32x32 is the safe standard and 48x48 improves HiDPI screens. For Windows desktop, launcher, or game icons, 256x256 provides the highest fidelity and downscales well. Selecting multiple sizes embeds them all in one ICO file so Windows and browsers can pick the best match." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I convert multiple WebP files at once?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Drag and drop or select many WebP files, choose your sizes, and convert. Every resulting ICO icon is downloaded either individually or as one ZIP file." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does transparency work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. ICO output is written as 32-bit PNG-compressed entries, which preserves the alpha channel. Keep the background set to Transparent to keep transparency, or flatten to white or black for favicons that need a solid backdrop." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the ICO as a favicon?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Use the Favicon Generator mode to produce favicon.ico (16/32/48) plus PNGs at 16, 32, 48, 192 and 512 px, together with copy-paste HTML <link> tags. Modern browsers also accept PNG favicons." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work offline after the page loads?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Once the page and the JSZip library have loaded, conversion runs entirely locally. No further network requests are needed while you convert files." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webp2ico.com/index.html" }
+    ]
+  }
+  </script>
+
+  <!-- ========================================================= -->
+  <!--  GOOGLE ANALYTICS (gtag.js) — PLACEHOLDER, DISABLED        -->
+  <!--  Insert your real GA4 Measurement ID below, then remove    -->
+  <!--  the comment markers to enable. Do NOT ship bogus tags.    -->
+  <!-- ========================================================= -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- ========================================================= -->
+  <!--  GOOGLE ADSENSE — PLACEHOLDER (activate only after approval) -->
+  <!-- ========================================================= -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+
+  <style>
+    /* =========================================================
+       AWS S3-INSPIRED THEME
+       Palette: deep space blue (#161b2e navy), AWS signature
+       orange accent (#FF9900), teal secondary (#00A8B4),
+       clean white content cards, large display typography.
+       Animations are lightweight (GPU-friendly transforms +
+       opacity) via IntersectionObserver for Core Web Vitals.
+    ========================================================= */
+    :root {
+      --aws-navy: #131a33;
+      --aws-navy-2: #1a2345;
+      --aws-navy-3: #232e5c;
+      --aws-orange: #ff9900;
+      --aws-orange-dark: #e68a00;
+      --aws-teal: #00a8b4;
+      --aws-blue: #37a1e0;
+      --aws-text-dark: #161b2e;
+      --aws-text-light: #d5dbe6;
+      --aws-muted: #93a1bd;
+      --aws-card: #ffffff;
+      --aws-bg-soft: #f3f5fa;
+      --aws-border: #e2e6ef;
+      --radius: 12px;
+      --shadow: 0 12px 34px rgba(19,26,51,.18);
+      --shadow-sm: 0 4px 14px rgba(19,26,51,.10);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--aws-navy);
+      color: var(--aws-text-light);
+      line-height: 1.55;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--aws-teal); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    :focus-visible {
+      outline: 3px solid rgba(255,153,0,.55);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .container { max-width:1080px; margin:0 auto; padding:0 24px; }
+
+    /* =========================================================
+       HEADER — glassy sticky AWS-style nav
+    ========================================================= */
+    header {
+      position: sticky; top:0; z-index:60;
+      background: rgba(19,26,51,.82);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      padding:14px 0;
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .brand {
+      display:flex; align-items:center; gap:11px;
+      font-weight:800; font-size:1.08rem; color:#fff; text-decoration:none !important;
+      letter-spacing:.2px;
+    }
+    .brand:hover { color:#fff; }
+    .brand .squirrel {
+      width:36px; height:36px; border-radius:8px;
+      background:var(--aws-orange);
+      display:grid; place-items:center;
+      color:#1a1300; font-weight:900; font-size:.66rem;
+      box-shadow:0 3px 10px rgba(255,153,0,.35);
+      transition:transform .25s ease;
+    }
+    .brand:hover .squirrel { transform:rotate(-8deg) scale(1.05); }
+    .nav-links a {
+      color:var(--aws-muted); text-decoration:none !important;
+      font-size:.92rem; margin-left:20px; padding:6px 2px;
+      position:relative; transition:color .2s;
+    }
+    .nav-links a::after {
+      content:""; position:absolute; left:0; right:0; bottom:0;
+      height:2px; background:var(--aws-orange);
+      transform:scaleX(0); transform-origin:left;
+      transition:transform .25s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color:#fff; }
+    .nav-links a:hover::after, .nav-links a.active::after { transform:scaleX(1); }
+
+    /* =========================================================
+       HERO — dark AWS blueprint hero with animated glow
+    ========================================================= */
+    .hero {
+      position:relative;
+      text-align:center;
+      padding:70px 0 56px;
+      overflow:hidden;
+    }
+    .hero::before, .hero::after {
+      content:""; position:absolute; width:520px; height:520px;
+      border-radius:50%; filter:blur(70px); pointer-events:none;
+      animation:drift 12s ease-in-out infinite alternate;
+    }
+    .hero::before { background:rgba(255,153,0,.18); top:-180px; left:-120px; }
+    .hero::after  { background:rgba(0,168,180,.15); bottom:-220px; right:-140px; animation-delay:4s; }
+    @keyframes drift {
+      from { transform:translate(0,0) scale(1); }
+      to   { transform:translate(40px,30px) scale(1.15); }
+    }
+    .hero .eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(255,153,0,.12);
+      border:1px solid rgba(255,153,0,.35);
+      color:var(--aws-orange);
+      font-size:.82rem; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
+      padding:7px 16px; border-radius:999px; margin-bottom:22px;
+    }
+    .hero .eyebrow .dot {
+      width:7px; height:7px; border-radius:50%; background:var(--aws-orange);
+      box-shadow:0 0 8px var(--aws-orange);
+      animation:pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+    .hero h1 {
+      font-size:clamp(2rem, 5vw, 3.3rem);
+      line-height:1.1; color:#fff; font-weight:800;
+      letter-spacing:-.5px; margin-bottom:18px;
+    }
+    .hero h1 .grad {
+      background:linear-gradient(90deg, var(--aws-orange), var(--aws-teal));
+      -webkit-background-clip:text; background-clip:text;
+      -webkit-text-fill-color:transparent; color:var(--aws-orange);
+    }
+    .hero p.lead {
+      color:var(--aws-muted); max-width:720px; margin:0 auto; font-size:1.12rem;
+    }
+    .hero p.lead strong { color:#fff; font-weight:700; }
+    .badges { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px; }
+    .badge {
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      padding:8px 16px; border-radius:999px; font-size:.85rem; color:var(--aws-text-light);
+      animation:floatUp 8s ease-in-out infinite;
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .badge:hover { transform:translateY(-3px); border-color:rgba(255,153,0,.5); background:rgba(255,255,255,.1); }
+    .badge:nth-child(2){ animation-delay:.6s; }
+    .badge:nth-child(3){ animation-delay:1.2s; }
+    .badge:nth-child(4){ animation-delay:1.8s; }
+    .badge:nth-child(5){ animation-delay:2.4s; }
+    @keyframes floatUp { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+
+    /* small down-arrow hint */
+    .scroll-hint {
+      margin-top:34px; color:var(--aws-muted); font-size:.85rem;
+      animation:bob 2s ease-in-out infinite;
+    }
+    @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+
+    /* =========================================================
+       MAIN TOOL CARD — clean white "console" card
+    ========================================================= */
+    .tool-card {
+      background:var(--aws-card); color:var(--aws-text-dark);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:30px; margin:14px 0 60px;
+      border-top:4px solid var(--aws-orange);
+    }
+    .tool-card h2.section-head { display:flex; align-items:center; gap:10px; font-size:1.2rem; margin-bottom:16px; color:var(--aws-text-dark); }
+    .section-head .chip {
+      background:var(--aws-orange); color:#1a1300; font-size:.72rem; font-weight:800;
+      padding:3px 9px; border-radius:6px;
+    }
+
+    /* Mode tabs (ICO Converter / Favicon Generator) */
+    .mode-tabs { display:inline-flex; gap:6px; margin-bottom:22px; background:#eef1f8; padding:4px; border-radius:10px; }
+    .mode-tab {
+      appearance:none; border:none; background:transparent; color:#334155;
+      font-weight:700; font-size:.88rem; padding:9px 18px; border-radius:8px; cursor:pointer;
+      transition:background .2s, color .2s;
+    }
+    .mode-tab:hover { background:rgba(255,153,0,.14); }
+    .mode-tab[aria-pressed="true"] { background:var(--aws-orange); color:#1a1300; }
+
+    .drop-zone {
+      border:2px dashed #c6cde0; border-radius:var(--radius);
+      padding:44px 20px; text-align:center; cursor:pointer;
+      transition:border-color .2s, background .2s, transform .15s;
+      background:#f8fafd;
+    }
+    .drop-zone:hover, .drop-zone.dragover, .drop-zone:focus-visible { border-color:var(--aws-orange); background:#fff8ec; }
+    .drop-zone .icon { font-size:2.8rem; display:inline-block; transition:transform .3s ease; }
+    .drop-zone:hover .icon { transform:translateY(-6px); }
+    .drop-zone h3 { margin:10px 0 4px; color:var(--aws-text-dark); font-size:1.15rem; }
+    .drop-zone p { color:#64748b; font-size:.95rem; }
+    .drop-zone .browse {
+      display:inline-block; margin-top:14px;
+      background:var(--aws-orange); color:#1a1300;
+      padding:12px 24px; border-radius:8px; font-weight:700; border:none; cursor:pointer;
+      transition:background .18s, transform .1s;
+      font-size:.95rem;
+    }
+    .drop-zone .browse:hover { background:var(--aws-orange-dark); }
+    .drop-zone .browse:active { transform:scale(.98); }
+    .drop-zone .browse:disabled { opacity:.55; cursor:not-allowed; }
+
+    .controls { display:flex; gap:22px; align-items:flex-start; flex-wrap:wrap; margin:22px 0 6px; }
+    .controls .ctl {
+      border:none; padding:0; margin:0; min-width:150px;
+      font-weight:700; font-size:.9rem; color:#334155;
+      display:flex; flex-direction:column; gap:8px;
+    }
+    .controls legend { font-weight:700; font-size:.9rem; color:#334155; margin-bottom:8px; padding:0; }
+    .controls select, .controls input[type=number]{
+      padding:10px 12px; border:1px solid var(--aws-border); border-radius:8px;
+      font-size:.95rem; background:#fff; color:var(--aws-text-dark);
+      transition:border-color .18s, box-shadow .18s;
+    }
+    .controls select:focus, .controls input[type=number]:focus {
+      outline:none; border-color:var(--aws-orange); box-shadow:0 0 0 3px rgba(255,153,0,.18);
+    }
+
+    /* segmented size-mode pills */
+    .seg { display:inline-flex; gap:2px; background:#eef1f8; padding:3px; border-radius:9px; width:max-content; }
+    .seg input { position:absolute; opacity:0; pointer-events:none; }
+    .seg label {
+      padding:8px 14px; border-radius:7px; cursor:pointer;
+      font-weight:600; font-size:.84rem; color:#334155; border:1px solid transparent;
+      transition:background .15s, color .15s;
+    }
+    .seg input:checked + label { background:var(--aws-orange); color:#1a1300; font-weight:700; }
+    .seg input:focus-visible + label { outline:3px solid rgba(255,153,0,.4); outline-offset:1px; }
+
+    /* checkbox size chips */
+    .chip-checks { display:flex; gap:8px; flex-wrap:wrap; }
+    .chip-checks input { position:absolute; opacity:0; pointer-events:none; }
+    .chip-checks label {
+      background:#f1f5f9; border:1px solid var(--aws-border); color:#334155;
+      padding:8px 13px; border-radius:8px; font-weight:600; font-size:.84rem; cursor:pointer;
+      transition:background .15s, border-color .15s, color .15s;
+    }
+    .chip-checks input:checked + label { background:var(--aws-orange); border-color:var(--aws-orange); color:#1a1300; font-weight:700; }
+    .chip-checks input:focus-visible + label { outline:3px solid rgba(255,153,0,.4); outline-offset:1px; }
+
+    .conv-note { font-size:.85rem; color:#64748b; margin:10px 0 0; }
+    .conv-note b { color:#475569; }
+
+    .action-bar { display:flex; gap:12px; flex-wrap:wrap; margin:16px 0 12px; }
+    .btn {
+      padding:13px 24px; border:none; border-radius:8px; font-weight:700; font-size:.98rem;
+      cursor:pointer; transition:transform .1s, box-shadow .2s, background .18s, opacity .2s;
+      color:#fff;
+    }
+    .btn:active { transform:translateY(1px) scale(.99); }
+    .btn:disabled { opacity:.5; cursor:not-allowed; }
+    .btn-primary {
+      background:linear-gradient(135deg, var(--aws-orange), #ff7a3c); color:#1a1300;
+      box-shadow:0 6px 18px rgba(255,153,0,.35);
+    }
+    .btn-primary:hover:not(:disabled) { box-shadow:0 8px 24px rgba(255,153,0,.5); transform:translateY(-1px); }
+    .btn-ghost { background:#eef1f8; color:#334155; }
+    .btn-ghost:hover:not(:disabled) { background:#dde3f0; }
+    .btn-sm { padding:8px 14px; font-size:.85rem; }
+
+    .progress-wrap { margin-top:14px; display:none; }
+    .progress-bar { height:12px; background:#e9edf5; border-radius:999px; overflow:hidden; }
+    .progress-fill {
+      height:100%; width:0%;
+      background:linear-gradient(90deg, var(--aws-orange), var(--aws-teal));
+      border-radius:999px; transition:width .25s ease;
+    }
+    .progress-text { font-size:.85rem; color:#475569; margin-top:6px; }
+    .results-note { font-size:.9rem; font-weight:700; color:#334155; margin-top:8px; }
+
+    /* list toolbar */
+    .list-bar {
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      margin:14px 0 8px; padding:10px 12px; background:#f8fafd;
+      border:1px solid var(--aws-border); border-radius:10px;
+    }
+    .sel-all { display:flex; align-items:center; gap:7px; font-weight:600; font-size:.86rem; color:#334155; cursor:pointer; user-select:none; }
+    .sel-all input { width:16px; height:16px; accent-color:var(--aws-orange); cursor:pointer; }
+    .list-bar .counts { font-size:.8rem; color:#7b8aac; margin-left:auto; }
+
+    /* file rows */
+    .file-list { margin-top:8px; border-top:1px solid var(--aws-border); padding-top:10px; }
+    .file-row {
+      display:grid;
+      grid-template-columns: 18px 46px minmax(0,1fr) auto auto;
+      gap:12px; align-items:center;
+      padding:10px 6px; border-bottom:1px solid #f1f5f9;
+      animation:fadeRow .25s ease;
+    }
+    @keyframes fadeRow { from{opacity:0; transform:translateY(-4px)} to{opacity:1; transform:none} }
+    .row-check { width:16px; height:16px; accent-color:var(--aws-orange); cursor:pointer; }
+    .thumb {
+      width:44px; height:44px; border-radius:8px; overflow:hidden;
+      background:#f1f5f9; display:grid; place-items:center;
+      border:1px solid var(--aws-border);
+    }
+    .thumb img { width:100%; height:100%; object-fit:contain; display:block; }
+    .thumb .ph { color:#c0c9dd; font-size:1.1rem; }
+    .meta { min-width:0; }
+    .meta .name { font-weight:600; color:#1a2345; display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .meta .detail { font-size:.78rem; color:#7b8aac; display:block; margin-top:2px; }
+    .status { font-size:.82rem; font-weight:700; white-space:nowrap; }
+    .status .err-msg { display:block; font-weight:500; font-size:.74rem; color:#e5534c; max-width:220px; }
+    .status.ready { color:#64748b; }
+    .status.converting { color:var(--aws-orange-dark); }
+    .status.ok { color:#0f9d6e; }
+    .status.err { color:#e5534c; }
+    .actions { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .actions button {
+      appearance:none; border:1px solid var(--aws-border); background:#fff; color:#334155;
+      font-size:.78rem; font-weight:600; padding:6px 10px; border-radius:7px; cursor:pointer;
+      transition:background .15s, border-color .15s;
+    }
+    .actions button:hover { background:#eef1f8; border-color:#c6cde0; }
+    .actions .act-download { background:var(--aws-orange); border-color:var(--aws-orange); color:#1a1300; font-weight:700; }
+    .actions .act-download:hover { background:var(--aws-orange-dark); }
+    .actions .act-remove { color:#e5534c; border-color:#ffd7d4; }
+    .actions .act-remove:hover { background:#fff0ef; }
+
+    /* favicon HTML output panel */
+    .html-panel { margin-top:8px; }
+    .html-panel .hp-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:6px 0; }
+    .html-panel .hp-head b { font-size:.85rem; color:#334155; }
+    .html-out {
+      background:#0f172a; color:#d5dbe6; border-radius:8px;
+      padding:12px 14px; font-family:ui-monospace, Consolas, "Courier New", monospace;
+      font-size:.78rem; overflow-x:auto; white-space:pre; line-height:1.55;
+    }
+    .copy-btn { white-space:nowrap; background:#eef1f8; color:#334155; border:1px solid var(--aws-border); border-radius:7px; padding:7px 12px; font-size:.8rem; font-weight:700; cursor:pointer; }
+    .copy-btn:hover { background:#dde3f0; }
+
+    .hint { font-size:.86rem; color:#64748b; margin-top:14px; }
+
+    /* =========================================================
+       PREVIEW MODAL
+    ========================================================= */
+    /* The `hidden` attribute must always win, even over
+       display:grid/flex rules below — otherwise the overlay is
+       visible from page load. */
+    [hidden] { display:none !important; }
+    .modal-overlay {
+      position:fixed; inset:0; background:rgba(10,14,28,.62);
+      display:grid; place-items:center; z-index:200; padding:20px;
+    }
+    .modal {
+      background:#fff; color:var(--aws-text-dark); border-radius:var(--radius);
+      max-width:720px; width:100%; max-height:88vh; overflow:auto;
+      padding:22px; box-shadow:var(--shadow);
+    }
+    .modal-head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
+    .modal-head h3 { font-size:1.05rem; color:#1a2345; }
+    .modal-close { appearance:none; background:#eef1f8; border:none; width:32px; height:32px; border-radius:8px; font-size:1rem; cursor:pointer; }
+    .modal-close:hover { background:#dde3f0; }
+    .modal-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+    .pvw { text-align:center; padding:12px; border:1px solid var(--aws-border); border-radius:10px; }
+    .pvw .pl {
+      width:112px; height:112px; margin:0 auto 8px; border-radius:8px;
+      border:1px solid #eef0f6;
+      background: repeating-conic-gradient(#f3f5fa 0% 25%, #ffffff 0% 50%) 0 0 / 16px 16px;
+      display:grid; place-items:center;
+    }
+    .pvw .pl img { display:block; max-width:100%; max-height:100%; }
+    .pvw .cap { font-size:.8rem; font-weight:700; color:#334155; }
+    .pvw .real { font-size:.7rem; color:#b6c0d8; }
+    .pvw.big .pl { width:170px; height:170px; }
+    .pvw-meta {
+      background:var(--aws-navy); color:#fff; border-radius:var(--radius);
+      padding:12px 14px; margin-bottom:14px; font-size:.85rem;
+      display:flex; flex-direction:column; gap:4px;
+    }
+    .pvw-meta .src { font-size:.75rem; color:var(--aws-muted); word-break:break-all; }
+    .pvw-meta .dst { font-weight:700; word-break:break-all; }
+    .pvw-meta .sizes { margin-top:6px; display:flex; flex-wrap:wrap; gap:6px; }
+    .pvw-meta .sizes span {
+      background:var(--aws-orange); color:#1a1300; font-weight:700;
+      font-size:.72rem; padding:2px 9px; border-radius:999px;
+    }
+
+    /* =========================================================
+       CONTENT SECTIONS (dark on navy, light cards)
+    ========================================================= */
+    .section { margin-bottom:60px; position:relative; }
+    .section h2 { font-size:clamp(1.6rem,3.5vw,2.2rem); color:#fff; margin-bottom:14px; font-weight:800; letter-spacing:-.3px; }
+    .section > p.intro { color:var(--aws-muted); max-width:760px; }
+    .section h2 .accent { color:var(--aws-orange); }
+
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; margin-top:24px; }
+    .mini-card {
+      background:var(--aws-card); color:var(--aws-text-dark);
+      border-radius:var(--radius); padding:22px;
+      border:1px solid var(--aws-border); border-top:3px solid var(--aws-orange);
+      box-shadow:var(--shadow-sm);
+      transition:transform .22s ease, box-shadow .22s ease;
+    }
+    .mini-card:hover { transform:translateY(-6px); box-shadow:var(--shadow); }
+    .mini-card .ico { font-size:1.9rem; display:block; margin-bottom:10px; }
+    .mini-card h3 { font-size:1.06rem; margin-bottom:6px; }
+    .mini-card p { font-size:.92rem; color:#475569; }
+
+    .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin:22px 0 0; list-style:none; }
+    .step {
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      border-radius:var(--radius); padding:20px; color:var(--aws-text-light);
+      transition:transform .22s ease, background .22s ease;
+    }
+    .step:hover { transform:translateY(-4px); background:rgba(255,255,255,.08); }
+    .step .num {
+      width:34px; height:34px; border-radius:50%;
+      background:var(--aws-teal); color:#fff; font-weight:800;
+      display:grid; place-items:center; margin-bottom:10px; font-size:.95rem;
+    }
+    .step strong { color:#fff; display:block; margin-bottom:4px; }
+    .step span { font-size:.9rem; color:var(--aws-muted); }
+
+    /* size guide */
+    .size-guide { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; margin-top:22px; list-style:none; }
+    .size-item {
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      border-radius:10px; padding:14px 18px; display:flex; align-items:baseline; gap:14px;
+    }
+    .size-item .px { color:var(--aws-orange); font-weight:800; font-size:1.05rem; flex:0 0 auto; }
+    .size-item span.desc { color:var(--aws-muted); font-size:.9rem; }
+
+    .faq { max-width:860px; margin:0 auto; }
+    .faq details {
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      border-radius:10px; padding:8px 18px; margin-bottom:10px;
+      transition:background .2s;
+    }
+    .faq details:hover { background:rgba(255,255,255,.08); }
+    .faq summary { cursor:pointer; font-weight:700; color:#fff; padding:12px 0; position:relative; }
+    .faq summary::-webkit-details-marker { display:none; }
+    .faq summary::after {
+      content:"+"; position:absolute; right:0; top:50%; transform:translateY(-50%);
+      color:var(--aws-orange); font-size:1.3rem; transition:transform .2s;
+    }
+    .faq details[open] summary::after { transform:translateY(-50%) rotate(45deg); }
+    .faq details p { margin:0 0 12px; font-size:.95rem; color:var(--aws-muted); padding-right:24px; }
+
+    /* Ad container */
+    .ad-slot { margin:30px 0; min-height:90px; display:none; }
+    .ad-slot.active { display:block; }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+    footer { border-top:1px solid rgba(255,255,255,.08); padding:32px 0 44px; text-align:center; color:var(--aws-muted); font-size:.88rem; }
+    footer a { color:var(--aws-muted); text-decoration:underline; }
+    footer a:hover { color:var(--aws-orange); }
+    footer .squirrel-mini {
+      width:26px; height:26px; border-radius:6px; background:var(--aws-orange);
+      color:#1a1300; font-weight:900; font-size:.5rem;
+      display:inline-grid; place-items:center; margin-bottom:8px;
+    }
+
+    /* =========================================================
+       TOAST
+    ========================================================= */
+    .toast {
+      position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(160px);
+      background:var(--aws-navy-2); color:#fff; padding:14px 22px; border-radius:10px;
+      box-shadow:var(--shadow); transition:transform .3s ease; z-index:100; font-size:.92rem;
+      border:1px solid rgba(255,153,0,.35);
+    }
+    .toast.show { transform:translateX(-50%) translateY(0); }
+
+    /* =========================================================
+       SCROLL-REVEAL (intersection observer)
+    ========================================================= */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    /* Respect users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration:.001s !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.001s !important;
+      }
+      .reveal { opacity:1; transform:none; }
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+    @media (max-width:760px) {
+      .file-row { grid-template-columns: 18px 44px minmax(0,1fr); row-gap:6px; }
+      .file-row .status { grid-column: 3 / -1; margin-top:2px; }
+      .file-row .actions { grid-column: 2 / -1; justify-content:flex-start; }
+      .controls .ctl { min-width:130px; }
+      .list-bar .counts { width:100%; margin-left:0; }
+    }
+    @media (max-width:600px) {
+      .tool-card { padding:20px; }
+      .drop-zone { padding:32px 14px; }
+      .nav-links a { margin-left:12px; font-size:.85rem; }
+      .hero { padding:48px 0 40px; }
+      .seg label { padding:8px 10px; font-size:.8rem; }
+      .btn { width:100%; }
+      .action-bar .btn { width:auto; flex:1 1 auto; }
+      .modal { padding:16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="squirrel">.ico</span> WebP&nbsp;to&nbsp;ICO Converter</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Converter</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero container">
+    <div class="eyebrow"><span class="dot"></span> 100% In-Browser · $0 Cost · No Sign-Up</div>
+    <h1>Bulk <span class="grad">WebP to ICO</span> Converter<br>Fast, Private &amp; Free</h1>
+    <p class="lead">Convert batches of <strong>WebP images</strong> into <strong>ICO icons and favicons</strong> in seconds. Built for game developers, web developers, designers, and Windows app makers who need crisp launcher icons, taskbar icons, and website favicons — <strong>without uploading a single file</strong>.</p>
+    <div class="badges">
+      <span class="badge">✅ No Upload</span>
+      <span class="badge">🔒 100% Local</span>
+      <span class="badge">📦 Batch ZIP Download</span>
+      <span class="badge">🖼️ Favicon Generator</span>
+      <span class="badge">💰 Completely Free</span>
+    </div>
+    <div class="scroll-hint">▼ Scroll to convert</div>
+  </section>
+
+  <!-- ================= MAIN TOOL ================= -->
+  <main class="container">
+    <div class="tool-card" id="toolCard">
+      <h2 class="section-head">⚙️ Converter <span class="chip">LOCAL ONLY</span></h2>
+
+      <!-- Mode switch: ICO Converter / Favicon Generator -->
+      <div class="mode-tabs" aria-label="Converter mode">
+        <button type="button" class="mode-tab" data-mode="ico" id="modeIco" aria-pressed="true">ICO Converter</button>
+        <button type="button" class="mode-tab" data-mode="favicon" id="modeFavicon" aria-pressed="false">Favicon Generator</button>
+      </div>
+
+      <div class="drop-zone reveal" id="dropZone" role="button" tabindex="0" aria-label="Add WebP images by clicking or pressing Enter">
+        <div class="icon">🖼️</div>
+        <h3>Drag &amp; drop your WebP images here</h3>
+        <p>or click to select files. Add as many as you like.</p>
+        <button class="browse" type="button" id="browseBtn">Choose WebP Files</button>
+        <input type="file" id="fileInput" accept=".webp,image/webp" multiple hidden>
+      </div>
+
+      <!-- Conversion options -->
+      <div class="controls" id="controlsArea">
+        <fieldset class="ctl" id="sizeCtl">
+          <legend>Icon sizes</legend>
+          <div class="seg" role="radiogroup" aria-label="Size selection mode">
+            <input type="radio" name="sizeMode" id="smSingle" value="single" checked>
+            <label for="smSingle">Single</label>
+            <input type="radio" name="sizeMode" id="smMulti" value="multiple">
+            <label for="smMulti">Multiple</label>
+            <input type="radio" name="sizeMode" id="smAll" value="all">
+            <label for="smAll">All sizes</label>
+          </div>
+          <div id="singleSizeWrap">
+            <select id="sizeSelect" aria-label="Single icon size">
+              <option value="256">256 × 256 (best quality)</option>
+              <option value="128">128 × 128</option>
+              <option value="64">64 × 64</option>
+              <option value="48">48 × 48 (Windows HiDPI)</option>
+              <option value="32" selected>32 × 32 (standard favicon)</option>
+              <option value="16">16 × 16</option>
+            </select>
+          </div>
+          <div id="multiSizeWrap" class="chip-checks" hidden>
+            <span class="conv-note" style="width:100%; margin:0;">Tick the sizes to embed in each ICO:</span>
+            <input type="checkbox" class="size-check" id="sizeChk16" value="16"><label for="sizeChk16">16 px</label>
+            <input type="checkbox" class="size-check" id="sizeChk32" value="32" checked><label for="sizeChk32">32 px</label>
+            <input type="checkbox" class="size-check" id="sizeChk48" value="48"><label for="sizeChk48">48 px</label>
+            <input type="checkbox" class="size-check" id="sizeChk64" value="64"><label for="sizeChk64">64 px</label>
+            <input type="checkbox" class="size-check" id="sizeChk128" value="128"><label for="sizeChk128">128 px</label>
+            <input type="checkbox" class="size-check" id="sizeChk256" value="256"><label for="sizeChk256">256 px</label>
+          </div>
+        </fieldset>
+        <label class="ctl">Background
+          <select id="bgSelect">
+            <option value="transparent" selected>Transparent</option>
+            <option value="white">Solid White</option>
+            <option value="black">Solid Black</option>
+          </select>
+        </label>
+        <label class="ctl">Fit
+          <select id="fitSelect">
+            <option value="cover" selected>Fill (crop edges)</option>
+            <option value="contain">Contain (fit whole image)</option>
+          </select>
+        </label>
+        <label class="ctl">Order
+          <select id="sortSelect">
+            <option value="asc" selected>Filename (A→Z)</option>
+            <option value="desc">Filename (Z→A)</option>
+            <option value="input">As Added</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="conv-note">
+        <b>Background:</b> Transparent keeps the image's alpha channel (best for icons and logos). White and Black flatten the image onto a solid backdrop (best for favicons that need an opaque square).
+        <b>Fit:</b> Fill center-crops to the square edge; Contain fits the whole image and adds padding.
+      </p>
+      <p class="conv-note" id="favNote" hidden>
+        <b>Favicon mode</b> produces <code>favicon.ico</code> (16/32/48) plus PNG icons at 16, 32, 48, 192 and 512 px, together with copy-paste HTML. If your source WebP is smaller than a requested size, it is scaled up.
+      </p>
+
+      <!-- Actions -->
+      <div class="action-bar">
+        <button class="btn btn-primary" id="convertBtn" disabled>⬇️ Convert &amp; Download ZIP</button>
+        <button class="btn btn-ghost" id="clearBtn" disabled>Clear All</button>
+      </div>
+
+      <!-- Progress -->
+      <div class="progress-wrap" id="progressWrap" role="status" aria-live="polite">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-text" id="progressText">Ready</div>
+      </div>
+      <p class="results-note" id="resultsNote" aria-live="polite"></p>
+
+      <!-- List toolbar -->
+      <div class="list-bar" id="listBar" hidden>
+        <label class="sel-all"><input type="checkbox" id="selectAll" aria-label="Select all files"> Select all</label>
+        <button class="btn btn-ghost btn-sm" id="removeSelBtn" disabled>Remove selected</button>
+        <button class="btn btn-ghost btn-sm" id="clearDoneBtn">Clear completed</button>
+        <button class="btn btn-ghost btn-sm" id="retryBtn" disabled>Retry failed</button>
+        <span class="counts" id="listCounts"></span>
+      </div>
+
+      <!-- File list -->
+      <div class="file-list" id="fileList"></div>
+
+      <!-- Favicon HTML output -->
+      <div class="html-panel" id="htmlPanel" hidden></div>
+
+      <p class="hint reveal">💡 Your images never leave this device. All conversion happens inside your browser using the HTML5 Canvas API. ICO files can hold one size or several sizes (16–256 px) so Windows and browsers can pick the right one at any DPI.</p>
+    </div>
+
+    <!-- ============ AdSense ad unit #1 placeholder ============ -->
+    <div class="ad-slot active" id="adSlotTop">
+      <!-- AdSense code -->
+    </div>
+
+    <!-- ================= SEO CONTENT ================= -->
+    <section class="section reveal">
+      <h2>Why Convert <span class="accent">WebP to ICO</span>?</h2>
+      <p class="intro">Modern tools, game engines, and websites love <strong>WebP</strong> because it compresses artwork dramatically without visible quality loss. But Windows, browsers, and many launcher systems still expect the classic <strong>ICO</strong> format for app icons, taskbar icons, exe icons, and favicons. Use this free browser-based converter to bridge that gap in one click — for a single file or a whole batch.</p>
+
+      <div class="cards">
+        <div class="mini-card">
+          <div class="ico">🎮</div>
+          <h3>Game &amp; Launcher Icons</h3>
+          <p>Turn a single WebP logo into a multi-size ICO that Steam, itch.io, and desktop shortcuts render cleanly at any taskbar size.
+          </p>
+        </div>
+        <div class="mini-card">
+          <div class="ico">🌐</div>
+          <h3>Website Favicons</h3>
+          <p>Generate a crisp browser-tab favicon in seconds — including a full favicon package with PNG sizes and ready-to-paste HTML.
+          </p>
+        </div>
+        <div class="mini-card">
+          <div class="ico">🪟</div>
+          <h3>Windows &amp; App Icons</h3>
+          <p>Prepare exe, app, and folder icons for Windows at 16–256 px, with a 256×256 master that downscales beautifully at any DPI.
+          </p>
+        </div>
+        <div class="mini-card">
+          <div class="ico">🔒</div>
+          <h3>Privacy First</h3>
+          <p>Because nothing is uploaded, you can safely convert confidential or unreleased game assets with zero leak risk.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>How It Works</h2>
+      <ul class="steps">
+        <li class="step"><span class="num">1</span><strong>Add images</strong><span>Drag &amp; drop any number of .webp files onto the converter.</span></li>
+        <li class="step"><span class="num">2</span><strong>Pick sizes</strong><span>Choose one size, several sizes, or all sizes from 16×16 up to 256×256.</span></li>
+        <li class="step"><span class="num">3</span><strong>Choose background</strong><span>Keep transparency for icons, or flatten to white/black for favicons.</span></li>
+        <li class="step"><span class="num">4</span><strong>Download ZIP</strong><span>Every icon is packaged into a single ZIP, or grab each file individually.</span></li>
+      </ul>
+    </section>
+
+    <section class="section reveal">
+      <h2>Which <span class="accent">ICO Size</span> Should I Choose?</h2>
+      <p class="intro">ICO icons are most useful when they include the sizes your operating system and browser will actually ask for. When you pick multiple sizes, they are embedded in one ICO file and the OS picks the best match.</p>
+      <ul class="size-guide">
+        <li class="size-item"><span class="px">16 px</span><span class="desc">Taskbar, window titles, legacy browser favicons.</span></li>
+        <li class="size-item"><span class="px">32 px</span><span class="desc">Standard favicon, folder and file icons.</span></li>
+        <li class="size-item"><span class="px">48 px</span><span class="desc">Windows desktop and HiDPI favicons.</span></li>
+        <li class="size-item"><span class="px">64 px</span><span class="desc">Toolbar and taskbar icons on Windows.</span></li>
+        <li class="size-item"><span class="px">128 px</span><span class="desc">App shortcuts and Retina-display icons.</span></li>
+        <li class="size-item"><span class="px">256 px</span><span class="desc">Highest fidelity — Steam, itch.io, and Windows 4K use it.</span></li>
+      </ul>
+    </section>
+
+    <section class="section faq reveal">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Are my WebP images uploaded to a server?</summary>
+        <p>No. This is a fully client-side tool. Your files are read, resized, and packaged entirely inside your browser using the HTML5 Canvas API and the JSZip library. Nothing is ever transmitted over the internet.</p>
+      </details>
+      <details>
+        <summary>Is the converter free?</summary>
+        <p>Yes. There is no sign-up, no watermark, and no fee for processing or downloads. The website is supported by display advertising so the tool can stay free forever.</p>
+      </details>
+      <details>
+        <summary>How many files can I convert at once?</summary>
+        <p>There is no fixed limit. Because processing is local, your only constraints are your browser's memory and your device's performance. Progress updates live, so the UI never appears frozen during large batches.</p>
+      </details>
+      <details>
+        <summary>Which ICO size should I choose?</summary>
+        <p>For website favicons, 32×32 is the safe standard and 48×48 improves HiDPI screens. For Windows desktop, launcher, or game icons, 256×256 provides the highest fidelity and downscales well. Selecting multiple sizes embeds them all in one ICO so Windows and browsers can pick the best match.</p>
+      </details>
+      <details>
+        <summary>Can I convert multiple WebP files at once?</summary>
+        <p>Yes. Drag and drop or select many WebP files, choose your sizes, and convert. Every resulting ICO icon is downloaded either individually or as one ZIP file.</p>
+      </details>
+      <details>
+        <summary>Does transparency work?</summary>
+        <p>Yes. ICO output is written as 32-bit PNG-compressed entries, which preserves the alpha channel. Keep the background set to Transparent to keep transparency, or flatten to white or black for favicons that need a solid backdrop.</p>
+      </details>
+      <details>
+        <summary>Can I use the ICO as a favicon?</summary>
+        <p>Yes. Use the Favicon Generator mode to produce favicon.ico (16/32/48) plus PNGs at 16, 32, 48, 192 and 512 px, together with copy-paste HTML &lt;link&gt; tags. Modern browsers also accept PNG favicons, so the package covers old and new alike.</p>
+      </details>
+      <details>
+        <summary>Does it work offline after the page loads?</summary>
+        <p>Yes. Once the page and the JSZip library have loaded, conversion runs entirely locally. No further network requests are needed while you convert files.</p>
+      </details>
+    </section>
+
+    <!-- ============ AdSense ad unit #2 placeholder ============ -->
+    <div class="ad-slot active" id="adSlotBottom">
+      <!-- AdSense code -->
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="squirrel-mini">.ico</div>
+      <p><strong>WebP to ICO Converter</strong> — a free, private, browser-based converter for game developers, web developers, and designers.</p>
+      <p style="margin-top:10px;">
+        <a href="about.html">About</a> &nbsp;·&nbsp;
+        <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="terms.html">Terms of Service</a>
+      </p>
+      <p style="margin-top:12px; font-size:.8rem;">© 2026 WebP to ICO Converter. All rights reserved. Files are processed locally and never uploaded.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ================= PREVIEW MODAL ================= -->
+  <div class="modal-overlay" id="previewModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+      <div class="modal-head">
+        <h3 id="previewTitle">Icon Preview</h3>
+        <button type="button" class="modal-close" id="previewClose" aria-label="Close preview">✕</button>
+      </div>
+      <div class="pvw-meta" id="previewMeta" hidden></div>
+      <div class="modal-grid" id="previewGrid"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!--  JSZip library (CDN, pinned version)                     -->
+  <!-- ========================================================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script>
+  'use strict';
+
+  /* =========================================================
+   *  SCROLL-REVEAL MICRO-ANIMATIONS
+   * ======================================================= */
+  (function initReveal(){
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          en.target.classList.add('visible');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  })();
+
+  /* =========================================================
+   *  CONSTANTS & STATE
+   * ======================================================= */
+  var SIZES = [16, 32, 48, 64, 128, 256];
+  var FAV_ICO_SIZES = [16, 32, 48];
+  var FAV_PNG_SIZES = [16, 32, 48, 192, 512];
+  var MAX_FILE_BYTES = 50 * 1024 * 1024;   // 50 MB per file guard
+  var MAX_DIMENSION  = 16384;              // pixels per side guard
+
+  var filesArr = [];
+  var isConverting = false;
+  var MODE = 'ico';                        // 'ico' | 'favicon'
+  var nextId = 1;
+
+  var rowEls = {};                         // id -> { root, statusEl, checkEl, actionsEl }
+
+  var dropZone     = document.getElementById('dropZone');
+  var browseBtn    = document.getElementById('browseBtn');
+  var fileInput    = document.getElementById('fileInput');
+  var convertBtn   = document.getElementById('convertBtn');
+  var clearBtn     = document.getElementById('clearBtn');
+  var fileList     = document.getElementById('fileList');
+  var sizeSelect   = document.getElementById('sizeSelect');
+  var bgSelect     = document.getElementById('bgSelect');
+  var fitSelect    = document.getElementById('fitSelect');
+  var sortSelect   = document.getElementById('sortSelect');
+  var progressWrap = document.getElementById('progressWrap');
+  var progressFill = document.getElementById('progressFill');
+  var progressText = document.getElementById('progressText');
+  var resultsNote  = document.getElementById('resultsNote');
+  var toast        = document.getElementById('toast');
+  var listBar      = document.getElementById('listBar');
+  var selectAll    = document.getElementById('selectAll');
+  var removeSelBtn = document.getElementById('removeSelBtn');
+  var clearDoneBtn = document.getElementById('clearDoneBtn');
+  var retryBtn     = document.getElementById('retryBtn');
+  var listCounts   = document.getElementById('listCounts');
+  var sizeCtl      = document.getElementById('sizeCtl');
+  var favNote      = document.getElementById('favNote');
+  var htmlPanel    = document.getElementById('htmlPanel');
+  var previewModal = document.getElementById('previewModal');
+  var previewClose = document.getElementById('previewClose');
+  var previewGrid  = document.getElementById('previewGrid');
+  var previewTitle = document.getElementById('previewTitle');
+  var previewMeta  = document.getElementById('previewMeta');
+  var lastPreviewItem = null;   // file row currently shown in the modal
+  var lastFocusEl     = null;   // element to restore focus to on close
+  var modeIco      = document.getElementById('modeIco');
+  var modeFavicon  = document.getElementById('modeFavicon');
+  var singleSizeWrap = document.getElementById('singleSizeWrap');
+  var multiSizeWrap  = document.getElementById('multiSizeWrap');
+
+  /* =========================================================
+   *  HELPERS
+   * ======================================================= */
+  function showToast(msg, ms){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function(){ toast.classList.remove('show'); }, ms || 2600);
+  }
+
+  function setProgress(pct, label){
+    progressWrap.style.display = 'block';
+    progressFill.style.width = pct + '%';
+    progressText.textContent = label;
+  }
+
+  function setSummary(done, failed){
+    var parts = ['✓ ' + done + ' converted'];
+    if (failed > 0) parts.push('✕ ' + failed + ' failed');
+    resultsNote.textContent = parts.join('  ·  ');
+  }
+
+  function humanSize(bytes){
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+
+  function safeBaseName(name){
+    var base = String(name).replace(/\.webp$/i, '');
+    base = base.replace(/[^a-zA-Z0-9-_ ]/g, '_').replace(/\s+/g, ' ').trim();
+    return base || 'icon';
+  }
+
+  /* Unique, collision-free filename inside a ZIP or folder. */
+  function uniqueName(name, used){
+    var extIdx = name.lastIndexOf('.');
+    var baseEnd = extIdx > 0 ? name.slice(0, extIdx) : name;
+    var ext = extIdx > 0 ? name.slice(extIdx) : '';
+    var un = name, i = 2;
+    while (used.has(un)){
+      un = baseEnd + '_' + i + ext;
+      i++;
+    }
+    used.add(un);
+    return un;
+  }
+
+  function friendlyError(err){
+    var msg = (err && err.message) ? err.message : '';
+    if (msg.indexOf('decode failed') !== -1) return 'This image could not be decoded.';
+    if (msg.indexOf('too large') !== -1)     return 'This file is too large for reliable browser processing.';
+    if (msg.indexOf('InvalidWebP') !== -1)   return 'Please select a WebP image.';
+    return 'Conversion failed. Please try again.';
+  }
+
+  function loadImage(file){
+    return new Promise(function(resolve, reject){
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function(){ URL.revokeObjectURL(url); resolve(img); };
+      img.onerror = function(){ URL.revokeObjectURL(url); reject(new Error('decode failed: ' + file.name)); };
+      img.src = url;
+    });
+  }
+
+  function requireJSZip(){
+    if (typeof JSZip === 'undefined' && typeof window.JSZip === 'undefined'){
+      showToast('JSZip failed to load — check your connection and reload the page.', 4000);
+      return false;
+    }
+    return true;
+  }
+
+  function getJSZip(){
+    return (typeof JSZip !== 'undefined') ? JSZip : window.JSZip;
+  }
+
+  /* =========================================================
+   *  FILE ADDITION & VALIDATION
+   * ======================================================= */
+  function isWebp(file){
+    // Magic bytes: RIFF....WEBP
+    return new Promise(function(resolve){
+      try {
+        file.slice(0, 12).arrayBuffer().then(function(buf){
+          var b = new Uint8Array(buf);
+          resolve(
+            b[0] === 0x52 && b[1] === 0x49 && b[2] === 0x46 && b[3] === 0x46 &&
+            b[8] === 0x57 && b[9] === 0x45 && b[10] === 0x42 && b[11] === 0x50
+          );
+        }, function(){ resolve(false); });
+      } catch (e){
+        resolve(false);
+      }
+    });
+  }
+
+  function addFiles(list){
+    if (isConverting){
+      showToast('Please wait for the current conversion to finish.');
+      return;
+    }
+    [].forEach.call(list, function(file){
+      var item = {
+        id: nextId++,
+        file: file,
+        name: file.name,
+        size: file.size,
+        ready: false,
+        status: 'pending',          // pending|ready|converting|ok|error
+        retriable: false,
+        error: null,
+        info: null,                 // { w, h, alpha, format }
+        thumb: null,                // data URL
+        result: null                // { icoUrl, files[], previews[], html }
+      };
+      if (file.size > MAX_FILE_BYTES){
+        item.status = 'error';
+        item.error = 'This file is too large for reliable browser processing.';
+      } else {
+        isWebp(file).then(function(ok){
+          if (!ok){
+            item.status = 'error';
+            item.error = 'Please select a WebP image.';
+            renderList();
+            return;
+          }
+          item.status = 'ready';
+          item.ready = true;
+          renderList();
+          gatherInfo(item);
+        });
+      }
+      filesArr.push(item);
+    });
+    renderList();
+    if (list.length > 0){
+      showToast(list.length + (list.length === 1 ? ' file' : ' files') + ' added — ready to convert.');
+    }
+  }
+
+  function gatherInfo(item){
+    loadImage(item.file).then(function(img){
+      var w = img.naturalWidth, h = img.naturalHeight;
+      if (!w || !h){
+        item.status = 'error';
+        item.error = 'This image could not be decoded.';
+        item.retriable = true;
+        renderList();
+        return;
+      }
+      if (Math.max(w, h) > MAX_DIMENSION){
+        item.status = 'error';
+        item.error = 'This file is too large for reliable browser processing.';
+        renderList();
+        return;
+      }
+      item.info = { w: w, h: h, alpha: detectAlpha(img), format: 'WebP' };
+      item.thumb = makeThumb(img);
+      renderList();
+    }, function(){
+      item.status = 'error';
+      item.error = 'This image could not be decoded.';
+      item.retriable = true;
+      renderList();
+    });
+  }
+
+  /* Detect any semi/fully-transparent pixel in the source (scaled to be cheap). */
+  function detectAlpha(img){
+    try {
+      var w = img.naturalWidth, h = img.naturalHeight;
+      var max = 128;
+      var scale = Math.min(1, max / Math.max(w, h));
+      var cw = Math.max(1, Math.round(w * scale));
+      var ch = Math.max(1, Math.round(h * scale));
+      var canvas = document.createElement('canvas');
+      canvas.width = cw; canvas.height = ch;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, cw, ch);
+      var data = ctx.getImageData(0, 0, cw, ch).data;
+      for (var i = 3; i < data.length; i += 4){
+        if (data[i] < 255) return true;
+      }
+      return false;
+    } catch (e){
+      return false;
+    }
+  }
+
+  function makeThumb(img){
+    try {
+      var w = 44, h = 44;
+      var canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      var ctx = canvas.getContext('2d');
+      var sw = img.naturalWidth, sh = img.naturalHeight;
+      var scale = Math.min(w / sw, h / sh);
+      var dw = sw * scale, dh = sh * scale;
+      ctx.drawImage(img, (w - dw) / 2, (h - dh) / 2, dw, dh);
+      return canvas.toDataURL('image/png');
+    } catch (e){
+      return null;
+    }
+  }
+
+  /* =========================================================
+   *  IMAGE RENDERING
+   * ======================================================= */
+  function drawImage(ctx, img, size, bg, fit){
+    var w = img.naturalWidth, h = img.naturalHeight;
+    if (!w || !h) throw new Error('decode failed');
+
+    if (bg === 'white'){ ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, size, size); }
+    else if (bg === 'black'){ ctx.fillStyle = '#000000'; ctx.fillRect(0, 0, size, size); }
+
+    var scale = (fit === 'contain')
+      ? Math.min(size / w, size / h)
+      : Math.max(size / w, size / h);
+    var dw = w * scale, dh = h * scale;
+    var dx = (size - dw) / 2, dy = (size - dh) / 2;
+
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(img, dx, dy, dw, dh);
+  }
+
+  function renderCanvas(img, size, bg, fit){
+    var canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    var ctx = canvas.getContext('2d');
+    drawImage(ctx, img, size, bg, fit);
+    return canvas;
+  }
+
+  function canvasToBytes(canvas){
+    return new Promise(function(res, rej){
+      canvas.toBlob(function(blob){
+        if (!blob) { rej(new Error('toBlob failed')); return; }
+        blob.arrayBuffer().then(function(buf){
+          res(new Uint8Array(buf));
+        }, rej);
+      }, 'image/png');
+    });
+  }
+
+  function canvasToObjectUrl(canvas){
+    return new Promise(function(res){
+      canvas.toBlob(function(blob){
+        res(blob ? URL.createObjectURL(blob) : null);
+      }, 'image/png');
+    });
+  }
+
+  /* =========================================================
+   *  ICO BUILDING  (pure function — unit-testable)
+   *
+   *  Structure: 6-byte ICONDIR header, then N × 16-byte
+   *  ICONDIRENTRY entries, then the raw PNG blobs, in order.
+   *  Width/height bytes = 0 mean 256 (per the ICO spec).
+   *
+   *  ICO_BUILDER_START
+   * ======================================================= */
+  function buildIco(pngList){
+    // pngList: [{ size, bytes }]
+    var n = pngList.length;
+    var dirSize = 16 * n;
+    var total = 6 + dirSize;
+    for (var p = 0; p < n; p++) total += pngList[p].bytes.byteLength;
+
+    var out = new Uint8Array(total);
+    var dv = new DataView(out.buffer);
+
+    dv.setUint16(0, 0, true);              // reserved
+    dv.setUint16(2, 1, true);              // type: icon
+    dv.setUint16(4, n, true);              // count
+
+    var offset = 6 + dirSize;
+    for (var i = 0; i < n; i++){
+      var entry = 6 + (i * 16);
+      var size = pngList[i].size;
+      var dim = size >= 256 ? 0 : size;
+
+      var view = new DataView(
+        pngList[i].bytes.buffer,
+        pngList[i].bytes.byteOffset,
+        pngList[i].bytes.byteLength
+      );
+      var pw = view.getUint32(16, false);  // PNG IHDR width (big-endian)
+      var ph = view.getUint32(20, false);  // PNG IHDR height (big-endian)
+
+      out[entry]     = pw >= 256 ? 0 : pw; // width byte (0 = 256)
+      out[entry + 1] = ph >= 256 ? 0 : ph; // height byte
+      dv.setUint16(entry + 2, 0, true);    // reserved (must be 0)
+      dv.setUint16(entry + 4, 1, true);    // color planes
+      dv.setUint16(entry + 6, 32, true);   // bits per pixel
+      dv.setUint32(entry + 8,  pngList[i].bytes.byteLength, true); // size
+      dv.setUint32(entry + 12, offset, true);                       // offset
+
+      out.set(pngList[i].bytes, offset);
+      offset += pngList[i].bytes.byteLength;
+    }
+    return out;
+  }
+  /* ICO_BUILDER_END
+   * ======================================================= */
+
+  /* =========================================================
+   *  CORE CONVERSIONS
+   * ======================================================= */
+  function sizeMode(){
+    var el = document.querySelector('input[name="sizeMode"]:checked');
+    return el ? el.value : 'single';
+  }
+
+  function currentSizes(){
+    if (MODE === 'favicon') return FAV_ICO_SIZES.slice();
+    var mode = sizeMode();
+    if (mode === 'single') return [parseInt(sizeSelect.value, 10)];
+    if (mode === 'multiple'){
+      var picked = [];
+      [].forEach.call(document.querySelectorAll('.size-check:checked'), function(cb){
+        picked.push(parseInt(cb.value, 10));
+      });
+      if (picked.length === 0) return [32];
+      return picked;
+    }
+    return SIZES.slice();
+  }
+
+  async function convertOneFile(item, bg, fit){
+    var img = await loadImage(item.file);
+    var sizes = currentSizes();
+    var pngs = [];
+    var previews = [];
+    for (var i = 0; i < sizes.length; i++){
+      var s = sizes[i];
+      var canvas = renderCanvas(img, s, bg, fit);
+      var bytes = await canvasToBytes(canvas);
+      var pvUrl = await canvasToObjectUrl(canvas);
+      pngs.push({ size: s, bytes: bytes });
+      previews.push({ size: s, url: pvUrl });
+    }
+    var icoBytes = buildIco(pngs);
+    var icoName = safeBaseName(item.name) + '_' + sizes.join('_') + '.ico';
+    var icoBlob = new Blob([icoBytes], { type: 'image/x-icon' });
+    return {
+      icoUrl: URL.createObjectURL(icoBlob),
+      sizes: sizes.slice(),
+      files: [{ name: icoName, bytes: icoBytes }],
+      previews: previews,
+      title: sizes.join(' × ')
+    };
+  }
+
+  async function convertFaviconFile(item, bg, fit){
+    var img = await loadImage(item.file);
+    var all = [];
+    var previews = [];
+    var bySize = {};
+    var i;
+
+    for (i = 0; i < FAV_PNG_SIZES.length; i++){
+      var s = FAV_PNG_SIZES[i];
+      var canvas = renderCanvas(img, s, bg, fit);
+      var bytes = await canvasToBytes(canvas);
+      bySize[s] = bytes;
+      previews.push({ size: s, url: await canvasToObjectUrl(canvas) });
+    }
+
+    var base = safeBaseName(item.name);
+    var files = [];
+
+    for (i = 0; i < FAV_ICO_SIZES.length; i++){
+      all.push({ size: FAV_ICO_SIZES[i], bytes: bySize[FAV_ICO_SIZES[i]] });
+    }
+    var favico = buildIco(all);
+    files.push({ name: 'favicon.ico', bytes: favico });
+
+    for (i = 0; i < FAV_PNG_SIZES.length; i++){
+      files.push({ name: base + '-' + FAV_PNG_SIZES[i] + '.png', bytes: bySize[FAV_PNG_SIZES[i]] });
+    }
+
+    var html =
+      '<link rel="icon" href="favicon.ico">\n' +
+      '<link rel="icon" type="image/png" sizes="32x32" href="' + base + '-32.png">\n' +
+      '<link rel="icon" type="image/png" sizes="192x192" href="' + base + '-192.png">';
+
+    var icoBlob = new Blob([favico], { type: 'image/x-icon' });
+    return {
+      icoUrl: URL.createObjectURL(icoBlob),
+      files: files,
+      previews: previews,
+      html: html
+    };
+  }
+
+  /* =========================================================
+   *  CONVERSION ENGINE (shared by Convert and Retry failed)
+   * ======================================================= */
+  async function runConversion(targets, zipName, label){
+    if (isConverting) return;
+    var done = 0, failed = 0;
+    var bg = bgSelect.value, fit = fitSelect.value;
+    var i;
+
+    isConverting = true;
+    setUIState(true);
+    selectAll.checked = false;
+    syncSelected();
+
+    for (i = 0; i < targets.length; i++){
+      var it = targets[i];
+      if (!it.ready){ continue; }
+      setRowStatus(it, 'converting');
+      setProgress(Math.round(i / targets.length * 100), label + ' ' + (i + 1) + ' of ' + targets.length + '…');
+      try {
+        var res = (MODE === 'favicon')
+          ? await convertFaviconFile(it, bg, fit)
+          : await convertOneFile(it, bg, fit);
+        releaseResult(it);
+        it.result = res;
+        it.status = 'ok';
+        setRowStatus(it, 'ok');
+        done++;
+        setProgress(Math.round((i + 1) / targets.length * 100), label + ' ' + (i + 1) + ' of ' + targets.length + '…');
+      } catch (err) {
+        it.status = 'error';
+        it.error = friendlyError(err);
+        it.retriable = true;
+        setRowStatus(it, 'error');
+        failed++;
+      }
+      await new Promise(function(r){ setTimeout(r, 0); }); // let the UI breathe
+    }
+
+    // Build the ZIP only from this run's successes
+    var zipResults = [];
+    for (i = 0; i < targets.length; i++){
+      var t = targets[i];
+      if (t.status === 'ok' && t.result) zipResults.push(t.result);
+    }
+
+    var zip = new (getJSZip())();
+
+    if (zipResults.length > 0){
+      var used = new Set();
+      zipResults.forEach(function(result){
+        result.files.forEach(function(file){
+          zip.file(uniqueName(file.name, used), file.bytes);
+        });
+      });
+      var blob = await zip.generateAsync({ type: 'blob' });
+      downloadBlob(blob, zipName);
+      setProgress(100, 'Done — ' + zipName + ' downloaded (' + zipResults.length + ' converted).');
+      showToast('✓ Downloaded ZIP with ' + zipResults.length + ' converted file' + (zipResults.length === 1 ? '' : 's') + '.');
+    } else {
+      setProgress(0, 'Nothing could be converted.');
+      showToast('Nothing could be converted — check the file list for errors.');
+    }
+
+    setSummary(done, failed);
+    isConverting = false;
+    setUIState(false);
+    renderList();
+    updateHtmlPanel();
+  }
+
+  function convertAll(){
+    if (isConverting) return;
+    if (!requireJSZip()) return;
+    invalidateResults(); // previous results become stale on reconvert
+    var targets = filesArr.filter(function(f){ return f.ready; });
+    if (targets.length === 0){
+      showToast('Please add at least one WebP image first.');
+      return;
+    }
+    var zipName = (MODE === 'favicon')
+      ? 'webp-to-favicon-package.zip'
+      : 'webp-to-ico-converted.zip';
+    var label = (MODE === 'favicon') ? 'Generating favicon' : 'Converting';
+    sortList(targets);
+    runConversion(targets, zipName, label);
+  }
+
+  function sortList(list){
+    if (sortSelect.value === 'asc') list.sort(function(a,b){ return a.name.localeCompare(b.name); });
+    else if (sortSelect.value === 'desc') list.sort(function(a,b){ return b.name.localeCompare(a.name); });
+  }
+
+  function retryFailed(){
+    var failed = filesArr.filter(function(f){ return f.status === 'error' && f.retriable; });
+    if (failed.length === 0) return;
+    if (!requireJSZip()) return;
+    var zipName = (MODE === 'favicon')
+      ? 'webp-to-favicon-package.zip'
+      : 'webp-to-ico-converted.zip';
+    runConversion(failed, zipName, 'Retrying');
+  }
+
+  function releaseResult(item){
+    if (!item.result) return;
+    if (item.result.icoUrl) URL.revokeObjectURL(item.result.icoUrl);
+    if (item.result.previews){
+      item.result.previews.forEach(function(p){ if (p.url) URL.revokeObjectURL(p.url); });
+    }
+    item.result = null;
+  }
+
+  /* Reset conversion results so statuses are honest after settings change. */
+  function invalidateResults(showList){
+    closePreview(); // previewed object URLs may be revoked below
+    filesArr.forEach(function(it){
+      if (it.status === 'ok' || it.status === 'converting') { it.status = 'ready'; }
+      else if (it.status === 'error' && it.retriable) { it.status = 'ready'; }
+      releaseResult(it);
+    });
+    resultsNote.textContent = '';
+    if (showList !== false) renderList();
+  }
+
+  /* =========================================================
+   *  DOM / LIST RENDERING
+   * ======================================================= */
+  function renderList(){
+    fileList.innerHTML = '';
+    rowEls = {};
+    var shown = 0;
+
+    filesArr.forEach(function(item){
+      shown++;
+      var row = document.createElement('div');
+      row.className = 'file-row';
+
+      var check = document.createElement('input');
+      check.type = 'checkbox';
+      check.className = 'row-check';
+      check.setAttribute('aria-label', 'Select ' + item.name);
+      check.addEventListener('change', syncSelected);
+
+      var thumb = document.createElement('div');
+      thumb.className = 'thumb';
+      if (item.thumb){
+        var im = document.createElement('img');
+        im.src = item.thumb;
+        im.alt = '';
+        thumb.appendChild(im);
+      } else {
+        var ph = document.createElement('span');
+        ph.className = 'ph';
+        ph.textContent = item.status === 'error' ? '✕' : '🖼️';
+        thumb.appendChild(ph);
+      }
+
+      var meta = document.createElement('div');
+      meta.className = 'meta';
+      var nameEl = document.createElement('span');
+      nameEl.className = 'name';
+      nameEl.textContent = item.name;
+      var detail = document.createElement('span');
+      detail.className = 'detail';
+      if (item.info){
+        detail.textContent = item.info.w + ' × ' + item.info.h + ' · ' + humanSize(item.size) + ' · ' +
+          item.info.format + ' · ' + (item.info.alpha ? 'alpha' : 'opaque');
+      } else {
+        detail.textContent = humanSize(item.size) + ' · ' + (item.status === 'error' ? 'not valid' : 'reading…');
+      }
+      meta.appendChild(nameEl);
+      meta.appendChild(detail);
+
+      var statusEl = document.createElement('span');
+      statusEl.className = 'status';
+
+      var actionsEl = document.createElement('div');
+      actionsEl.className = 'actions';
+
+      // Remove button (always)
+      var rm = document.createElement('button');
+      rm.type = 'button';
+      rm.className = 'act-remove';
+      rm.setAttribute('aria-label', 'Remove ' + item.name);
+      rm.textContent = '✕ Remove';
+      rm.addEventListener('click', function(){
+        removeItem(item);
+      });
+      actionsEl.appendChild(rm);
+
+      // Preview + download when converted
+      if (item.status === 'ok' && item.result){
+        var pv = document.createElement('button');
+        pv.type = 'button';
+        pv.textContent = 'Preview';
+        pv.addEventListener('click', function(){ openPreview(item); });
+        actionsEl.appendChild(pv);
+
+        var dl = document.createElement('button');
+        dl.type = 'button';
+        dl.className = 'act-download';
+        dl.textContent = MODE === 'favicon' ? 'Download .ico' : 'Download';
+        dl.addEventListener('click', function(){
+          var dlName = MODE === 'favicon'
+            ? 'favicon.ico'
+            : safeBaseName(item.name) + '_' + (item.result.sizes || ['icon']).join('_') + '.ico';
+          downloadBlobFromUrl(item.result.icoUrl, dlName);
+        });
+        actionsEl.appendChild(dl);
+      }
+
+      // Retry on failure
+      if (item.status === 'error' && item.retriable){
+        var rt = document.createElement('button');
+        rt.type = 'button';
+        rt.textContent = 'Retry';
+        rt.addEventListener('click', function(){
+          var z = (MODE === 'favicon') ? 'webp-to-favicon-package.zip' : 'webp-to-ico-converted.zip';
+          runConversion([item], z, 'Retrying');
+        });
+        actionsEl.appendChild(rt);
+      }
+
+      row.appendChild(check);
+      row.appendChild(thumb);
+      row.appendChild(meta);
+      row.appendChild(statusEl);
+      row.appendChild(actionsEl);
+      fileList.appendChild(row);
+
+      rowEls[item.id] = { root: row, statusEl: statusEl, checkEl: check, actionsEl: actionsEl };
+      setRowStatus(item, item.status);
+    });
+
+    if (shown === 0){
+      var empty = document.createElement('p');
+      empty.className = 'hint';
+      empty.style.padding = '10px 0';
+      empty.textContent = 'No files added yet.';
+      fileList.appendChild(empty);
+    }
+    updateListBar();
+  }
+
+  function setRowStatus(item, status){
+    var r = rowEls[item.id];
+    if (!r) return;
+    r.statusEl.className = 'status ' + status;
+    if (status === 'ready') r.statusEl.textContent = 'Ready';
+    else if (status === 'converting') r.statusEl.textContent = 'Converting…';
+    else if (status === 'ok') r.statusEl.textContent = '✓ Converted';
+    else {
+      r.statusEl.textContent = '✕ Failed';
+      if (item.error){
+        var em = document.createElement('span');
+        em.className = 'err-msg';
+        em.textContent = item.error;
+        r.statusEl.appendChild(em);
+      }
+    }
+  }
+
+  function updateListBar(){
+    var okCount = filesArr.filter(function(f){ return f.status === 'ok'; }).length;
+    listBar.hidden = filesArr.length === 0;
+    listCounts.textContent = filesArr.length + ' file' + (filesArr.length === 1 ? '' : 's') +
+      ' · ' + okCount + ' converted';
+    retryBtn.disabled = !filesArr.some(function(f){ return f.status === 'error' && f.retriable; });
+    clearDoneBtn.disabled = okCount === 0;
+    clearBtn.disabled = filesArr.length === 0 || isConverting;
+    convertBtn.disabled = filesArr.filter(function(f){ return f.ready; }).length === 0 || isConverting;
+    // Only auto-disable when a selection is impossible
+    syncSelected();
+  }
+
+  function syncSelected(){
+    var checks = [].filter.call(document.querySelectorAll('.row-check'), function(){ return true; });
+    var any = checks.some(function(c){ return c.checked; });
+    removeSelBtn.disabled = !any;
+    // toggle selectAll tri-state
+    var total = checks.length, sel = checks.filter(function(c){ return c.checked; }).length;
+    selectAll.checked = total > 0 && sel === total;
+    selectAll.indeterminate = sel > 0 && sel < total;
+  }
+
+  function removeItem(item){
+    if (isConverting) return;
+    if (lastPreviewItem === item) closePreview();
+    releaseResult(item);
+    filesArr = filesArr.filter(function(f){ return f.id !== item.id; });
+    renderList();
+    updateHtmlPanel();
+  }
+
+  function removeSelected(){
+    if (isConverting) return;
+    var removed = new Set();
+    filesArr = filesArr.filter(function(f){
+      var r = rowEls[f.id];
+      if (r && r.checkEl.checked){ releaseResult(f); removed.add(f); return false; }
+      return true;
+    });
+    if (lastPreviewItem && removed.has(lastPreviewItem)) closePreview();
+    selectAll.checked = false;
+    renderList();
+    updateHtmlPanel();
+  }
+
+  function clearCompleted(){
+    if (isConverting) return;
+    var removed = new Set();
+    filesArr = filesArr.filter(function(f){
+      if (f.status === 'ok'){ releaseResult(f); removed.add(f); return false; }
+      return true;
+    });
+    if (lastPreviewItem && removed.has(lastPreviewItem)) closePreview();
+    selectAll.checked = false;
+    renderList();
+    updateHtmlPanel();
+  }
+
+  function clearAll(){
+    if (isConverting) return;
+    filesArr.forEach(releaseResult);
+    filesArr = [];
+    closePreview();
+    selectAll.checked = false;
+    setProgress(0, 'Ready');
+    progressWrap.style.display = 'none';
+    resultsNote.textContent = '';
+    htmlPanel.hidden = true;
+    htmlPanel.innerHTML = '';
+    renderList();
+  }
+
+  /* =========================================================
+   *  DOWNLOAD / PREVIEW / HTML PANEL
+   * ======================================================= */
+  function downloadBlob(blob, filename){
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  }
+
+  function downloadBlobFromUrl(url, filename){
+    // Persistent URLs (e.g. per-file ICO blobs) are revoked by releaseResult(),
+    // so they remain usable for repeated downloads and previews.
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  function openPreview(item){
+    if (!item || !item.result || !item.result.previews ||
+        item.result.previews.length === 0) return; // never open an empty/fake preview
+
+    previewGrid.innerHTML = '';
+    previewTitle.textContent = 'Icon Preview';
+
+    // Metadata: original filename, generated .ico filename, available sizes
+    var icoName = '';
+    if (item.result.files && item.result.files.length && item.result.files[0].name){
+      icoName = item.result.files[0].name;
+    }
+    previewMeta.innerHTML = '';
+    if (item.name){
+      var src = document.createElement('div');
+      src.className = 'src';
+      src.textContent = 'Original: ' + item.name;
+      previewMeta.appendChild(src);
+    }
+    if (icoName){
+      var dst = document.createElement('div');
+      dst.className = 'dst';
+      dst.textContent = 'Generated: ' + icoName;
+      previewMeta.appendChild(dst);
+    }
+    var chips = document.createElement('div');
+    chips.className = 'sizes';
+    item.result.previews.forEach(function(p){
+      var c = document.createElement('span');
+      c.textContent = p.size + ' × ' + p.size;
+      chips.appendChild(c);
+    });
+    previewMeta.appendChild(chips);
+    previewMeta.hidden = false;
+
+    // Showcase the largest generated size prominently
+    var max = 0;
+    item.result.previews.forEach(function(p){ if (p.url && p.size > max) max = p.size; });
+
+    item.result.previews.forEach(function(p){
+      if (!p.url) return;
+      var box = document.createElement('div');
+      box.className = 'pvw';
+      if (p.size === max) box.classList.add('big');
+      var pl = document.createElement('div');
+      pl.className = 'pl';
+      var im = document.createElement('img');
+      im.src = p.url;
+      im.alt = p.size + ' × ' + p.size + ' icon preview';
+      im.width = p.size;
+      im.height = p.size;
+      pl.appendChild(im);
+      var cap = document.createElement('div');
+      cap.className = 'cap';
+      cap.textContent = p.size + ' × ' + p.size;
+      var real = document.createElement('div');
+      real.className = 'real';
+      real.textContent = 'stored at ' + p.size + ' px';
+      box.appendChild(pl);
+      box.appendChild(cap);
+      box.appendChild(real);
+      previewGrid.appendChild(box);
+    });
+
+    lastPreviewItem = item;
+    lastFocusEl = document.activeElement;
+    previewModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    previewClose.focus();
+  }
+
+  function closePreview(){
+    if (previewModal.hidden) return;
+    previewModal.hidden = true;
+    previewGrid.innerHTML = '';
+    previewMeta.hidden = true;
+    previewMeta.innerHTML = '';
+    lastPreviewItem = null;
+    document.body.style.overflow = '';
+    if (lastFocusEl && lastFocusEl.focus){
+      try { lastFocusEl.focus(); } catch (e) {}
+    }
+    lastFocusEl = null;
+  }
+
+  function updateHtmlPanel(){
+    clearTimeout(updateHtmlPanel._t);
+    htmlPanel.innerHTML = '';
+    updateHtmlPanel._t = setTimeout(function(){
+      if (MODE !== 'favicon'){ htmlPanel.hidden = true; return; }
+      var okItems = filesArr.filter(function(f){ return f.status === 'ok' && f.result && f.result.html; });
+      if (okItems.length === 0){ htmlPanel.hidden = true; return; }
+      htmlPanel.hidden = false;
+
+      okItems.forEach(function(item){
+        var card = document.createElement('div');
+        var head = document.createElement('div');
+        head.className = 'hp-head';
+        var lbl = document.createElement('b');
+        lbl.textContent = 'HTML to embed — ' + item.name;
+        var copy = document.createElement('button');
+        copy.type = 'button';
+        copy.className = 'copy-btn';
+        copy.textContent = 'Copy HTML';
+        copy.addEventListener('click', function(){ copyText(item.result.html, copy); });
+        head.appendChild(lbl);
+        head.appendChild(copy);
+        card.appendChild(head);
+
+        var pre = document.createElement('div');
+        pre.className = 'html-out';
+        pre.textContent = item.result.html;
+        card.appendChild(pre);
+        htmlPanel.appendChild(card);
+      });
+    }, 60);
+  }
+
+  function copyText(text, btn){
+    var done = function(){
+      var old = btn.textContent;
+      btn.textContent = '✓ Copied';
+      setTimeout(function(){ btn.textContent = old; }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, function(){
+        fallbackCopy(text);
+        done();
+      });
+    } else {
+      fallbackCopy(text);
+      done();
+    }
+  }
+
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    ta.remove();
+  }
+
+  /* =========================================================
+   *  UI STATE
+   * ======================================================= */
+  function setUIState(converting){
+    convertBtn.disabled = converting || filesArr.filter(function(f){ return f.ready; }).length === 0;
+    clearBtn.disabled = converting || filesArr.length === 0;
+    browseBtn.disabled = converting;
+    fileInput.disabled = converting;
+    [modeIco, modeFavicon].forEach(function(b){ b.disabled = converting; });
+  }
+
+  function setMode(mode){
+    if (MODE === mode) return;
+    MODE = mode;
+    modeIco.setAttribute('aria-pressed', String(mode === 'ico'));
+    modeFavicon.setAttribute('aria-pressed', String(mode === 'favicon'));
+
+    sizeCtl.hidden = mode === 'favicon';
+    favNote.hidden = mode !== 'favicon';
+
+    if (mode === 'favicon'){
+      convertBtn.innerHTML = '⬇️ Generate Favicon Package';
+    } else {
+      convertBtn.innerHTML = '⬇️ Convert &amp; Download ZIP';
+    }
+    invalidateResults();
+    updateHtmlPanel();
+  }
+
+  /* =========================================================
+   *  EVENTS
+   * ======================================================= */
+  browseBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    if (!isConverting) fileInput.click();
+  });
+
+  dropZone.addEventListener('click', function(){
+    if (!isConverting) fileInput.click();
+  });
+  dropZone.addEventListener('keydown', function(e){
+    if (isConverting) return;
+    if (e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      fileInput.click();
+    }
+  });
+
+  fileInput.addEventListener('change', function(e){
+    addFiles(e.target.files);
+    fileInput.value = '';
+  });
+
+  ['dragover', 'dragenter'].forEach(function(ev){
+    dropZone.addEventListener(ev, function(e){
+      e.preventDefault();
+      if (!isConverting) dropZone.classList.add('dragover');
+    });
+  });
+  ['dragleave', 'drop'].forEach(function(ev){
+    dropZone.addEventListener(ev, function(e){
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+    });
+  });
+  dropZone.addEventListener('drop', function(e){
+    if (!isConverting) addFiles(e.dataTransfer.files);
+  });
+
+  convertBtn.addEventListener('click', convertAll);
+  clearBtn.addEventListener('click', clearAll);
+  clearDoneBtn.addEventListener('click', clearCompleted);
+  retryBtn.addEventListener('click', retryFailed);
+  removeSelBtn.addEventListener('click', removeSelected);
+
+  selectAll.addEventListener('change', function(){
+    var want = selectAll.checked;
+    [].forEach.call(document.querySelectorAll('.row-check'), function(c){
+      c.checked = want;
+    });
+    syncSelected();
+  });
+
+  modeIco.addEventListener('click', function(){ setMode('ico'); });
+  modeFavicon.addEventListener('click', function(){ setMode('favicon'); });
+
+  // Settings change → results are stale → reset statuses for honesty.
+  var resetControls = [
+    document.getElementById('sizeSelect'),
+    bgSelect,
+    fitSelect,
+    sortSelect
+  ];
+  resetControls.forEach(function(el){
+    el.addEventListener('change', function(){
+      if (!isConverting){ invalidateResults(); }
+    });
+  });
+  [].forEach.call(document.querySelectorAll('input[name="sizeMode"]'), function(r){
+    r.addEventListener('change', function(){
+      var mode = sizeMode();
+      singleSizeWrap.hidden = mode !== 'single';
+      multiSizeWrap.hidden = mode !== 'multiple';
+      if (!isConverting){ invalidateResults(); }
+    });
+  });
+  [].forEach.call(document.querySelectorAll('.size-check'), function(cb){
+    cb.addEventListener('change', function(){
+      if (!isConverting){ invalidateResults(); }
+    });
+  });
+
+  previewClose.addEventListener('click', closePreview);
+  previewModal.addEventListener('click', function(e){
+    if (e.target === previewModal) closePreview();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && !previewModal.hidden) closePreview();
+  });
+
+  /* =========================================================
+   *  INIT
+   * ======================================================= */
+  renderList();
+  </script>
+</body>
+</html>
