@@ -9,7 +9,7 @@
   <!-- ========================================================= -->
   <title>About Us – Bulk WebP to ICO Converter</title>
   <meta name="description" content="Meet the team behind the free Bulk WebP to ICO Converter. We are indie game developers building a privacy-first, browser-based WebP to ICO icon converter that runs 100% locally with no uploads, no sign-up, and no cost.">
-  <link rel="canonical" href="https://webp2ico.com/about.html">
+  <link rel="canonical" href="https://www.webp2ico.com/about.html">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / Twitter -->
@@ -17,13 +17,13 @@
   <meta property="og:site_name" content="WebP to ICO Converter">
   <meta property="og:title" content="About Us – Bulk WebP to ICO Converter">
   <meta property="og:description" content="We're indie devs who built a fast, private, free WebP to ICO batch converter that never uploads your files.">
-  <meta property="og:url" content="https://webp2ico.com/about.html">
-  <meta property="og:image" content="https://webp2ico.com/og-image.png">
+  <meta property="og:url" content="https://www.webp2ico.com/about.html">
+  <meta property="og:image" content="https://www.webp2ico.com/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://webp2ico.com/og-image.png">
+  <meta name="twitter:image" content="https://www.webp2ico.com/og-image.png">
 
   <!-- Structured data: AboutPage + Organization for SEO -->
   <script type="application/ld+json">
@@ -31,13 +31,13 @@
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About the Bulk WebP to ICO Converter",
-    "url": "https://webp2ico.com/about.html",
+    "url": "https://www.webp2ico.com/about.html",
     "description": "Privacy-first, free, browser-based bulk WebP to ICO icon converter built by indie game developers.",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Bulk WebP to ICO Converter", "item": "https://webp2ico.com/index.html" },
-        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://webp2ico.com/about.html" }
+        { "@type": "ListItem", "position": 1, "name": "Bulk WebP to ICO Converter", "item": "https://www.webp2ico.com/" },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.webp2ico.com/about.html" }
       ]
     },
     "mainEntity": {
@@ -261,6 +261,19 @@
       .values-grid { grid-template-columns:1fr; }
       .story { padding:18px 18px; }
     }
+  
+    .footer-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; text-align:left;
+      margin-bottom:30px;
+    }
+    .footer-col h4 {
+      color:#fff; font-size:.95rem; margin-bottom:12px; font-weight:800;
+    }
+    .footer-col ul { list-style:none; padding:0; margin:0; }
+    .footer-col li { margin-bottom:8px; }
+    .footer-col a { color:var(--aws-muted); font-size:.88rem; text-decoration:none; }
+    .footer-col a:hover { color:var(--aws-orange); text-decoration:underline; }
+
   </style>
 </head>
 <body>
@@ -271,6 +284,9 @@
       <a href="index.html" class="brand"><span class="squirrel">.ico</span> WebP&nbsp;to&nbsp;ICO Converter</a>
       <nav class="nav-links">
         <a href="index.html">Converter</a>
+        <a href="png-to-ico.html">PNG to ICO</a>
+        <a href="svg-to-ico.html">SVG to ICO</a>
+        <a href="jpg-to-ico.html">JPG to ICO</a>
         <a href="about.html" class="active">About</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -355,16 +371,51 @@
 
   <!-- ================= FOOTER ================= -->
   <footer>
+
     <div class="container">
-      <div class="squirrel-mini">.ico</div>
-      <p><strong>WebP to ICO Converter</strong> — a free, private, browser-based converter for game developers, web developers, and designers.</p>
-      <p class="foot-links">
-        <a href="about.html">About</a> &nbsp;·&nbsp;
-        <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
-        <a href="terms.html">Terms of Service</a>
-      </p>
-      <p style="margin-top:10px; font-size:.8rem;">© 2026 WebP to ICO Converter · Files are processed locally and never uploaded.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <div class="squirrel-mini" style="margin-bottom:0;">.ico</div>
+            <strong style="color:#fff; font-size:1.05rem;">WebP to ICO</strong>
+          </div>
+          <p style="font-size:.85rem; color:var(--aws-muted); line-height:1.5;">
+            The 100% private, client-side icon and favicon suite for developers, designers, and game creators. No uploads, no subscriptions.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Converters</h4>
+          <ul>
+            <li><a href="index.html">WebP to ICO Converter</a></li>
+            <li><a href="png-to-ico.html">PNG to ICO Converter</a></li>
+            <li><a href="svg-to-ico.html">SVG to ICO Converter</a></li>
+            <li><a href="jpg-to-ico.html">JPG to ICO Converter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Favicon &amp; Specs</h4>
+          <ul>
+            <li><a href="index.html#sizeGuideSec">ICO Size Standards Guide</a></li>
+            <li><a href="index.html#comparisonSec">Format Feature Comparison</a></li>
+            <li><a href="index.html#pwaSpecsSec">PWA &amp; HTML5 Favicon Best Practices</a></li>
+            <li><a href="index.html#faqSec">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company &amp; Legal</h4>
+          <ul>
+            <li><a href="about.html">About Developer Team</a></li>
+            <li><a href="privacy.html">Zero-Upload Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.08); padding-top:20px;">
+        <p style="font-size:.82rem; color:var(--aws-muted);">© 2026 WebP to ICO Converter (webp2ico.com). All processing is executed client-side via HTML5 Canvas API &amp; Web Workers.</p>
+      </div>
     </div>
+
   </footer>
 
   <script>
