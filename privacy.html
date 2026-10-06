@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TR2CS87JG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0TR2CS87JG');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,7 +18,8 @@
   <!--  SEO TITLE, DESCRIPTION & SOCIAL (long-tail keywords)     -->
   <!-- ========================================================= -->
   <title>Privacy Policy – Bulk WebP to ICO Converter (Files Never Uploaded)</title>
-  <meta name="description" content="Privacy policy for the free Bulk WebP to ICO converter for game developers. Your WebP images are processed 100% locally in the browser and never uploaded. Learn how Google AdSense cookies work, what data is not collected, and how to opt out of personalized ads.">
+  <meta name="description"
+    content="Privacy policy for the free Bulk WebP to ICO converter for game developers. Your WebP images are processed 100% locally in the browser and never uploaded. Learn how Google AdSense cookies work, what data is not collected, and how to opt out of personalized ads.">
   <link rel="canonical" href="https://www.webp2ico.com/privacy.html">
   <meta name="robots" content="index, follow">
 
@@ -16,7 +27,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WebP to ICO Converter">
   <meta property="og:title" content="Privacy Policy – Bulk WebP to ICO Converter (Files Never Uploaded)">
-  <meta property="og:description" content="Your WebP images are processed 100% locally and never uploaded. Learn how Google AdSense advertising cookies work and your opt-out choices.">
+  <meta property="og:description"
+    content="Your WebP images are processed 100% locally and never uploaded. Learn how Google AdSense advertising cookies work and your opt-out choices.">
   <meta property="og:url" content="https://www.webp2ico.com/privacy.html">
   <meta property="og:image" content="https://www.webp2ico.com/og-image.png">
   <meta property="og:image:type" content="image/png">
@@ -77,195 +89,603 @@
       --aws-card: #ffffff;
       --aws-border: #e2e6ef;
       --radius: 12px;
-      --shadow: 0 12px 34px rgba(19,26,51,.18);
-      --shadow-sm: 0 4px 14px rgba(19,26,51,.10);
+      --shadow: 0 12px 34px rgba(19, 26, 51, .18);
+      --shadow-sm: 0 4px 14px rgba(19, 26, 51, .10);
     }
 
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:90px; -webkit-text-size-adjust:100%; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--aws-navy); color: var(--aws-text-light); line-height:1.65;
-      overflow-x:hidden;
+      background: var(--aws-navy);
+      color: var(--aws-text-light);
+      line-height: 1.65;
+      overflow-x: hidden;
     }
-    a { color: var(--aws-teal); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+    a {
+      color: var(--aws-teal);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
     /* ---- Header (same as index) ---- */
     header {
-      position:sticky; top:0; z-index:60;
-      background:rgba(19,26,51,.82);
-      -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.08); padding:14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: rgba(19, 26, 51, .82);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      padding: 14px 0;
     }
-    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
-    .brand { display:flex; align-items:center; gap:11px; font-weight:800; font-size:1.08rem; color:#fff; text-decoration:none !important; letter-spacing:.2px; }
-    .brand:hover { color:#fff; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      font-size: 1.08rem;
+      color: #fff;
+      text-decoration: none !important;
+      letter-spacing: .2px;
+    }
+
+    .brand:hover {
+      color: #fff;
+    }
+
     .brand .squirrel {
-      width:36px; height:36px; border-radius:8px; background:var(--aws-orange);
-      display:grid; place-items:center; color:#1a1300; font-weight:900; font-size:.66rem;
-      box-shadow:0 3px 10px rgba(255,153,0,.35); transition:transform .25s ease;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--aws-orange);
+      display: grid;
+      place-items: center;
+      color: #1a1300;
+      font-weight: 900;
+      font-size: .66rem;
+      box-shadow: 0 3px 10px rgba(255, 153, 0, .35);
+      transition: transform .25s ease;
     }
-    .brand:hover .squirrel { transform:rotate(-8deg) scale(1.05); }
+
+    .brand:hover .squirrel {
+      transform: rotate(-8deg) scale(1.05);
+    }
+
     .nav-links a {
-      color:var(--aws-muted); text-decoration:none !important; font-size:.92rem;
-      margin-left:20px; padding:6px 2px; position:relative; transition:color .2s;
+      color: var(--aws-muted);
+      text-decoration: none !important;
+      font-size: .92rem;
+      margin-left: 20px;
+      padding: 6px 2px;
+      position: relative;
+      transition: color .2s;
     }
+
     .nav-links a::after {
-      content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
-      background:var(--aws-orange); transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: var(--aws-orange);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s ease;
     }
-    .nav-links a:hover, .nav-links a.active { color:#fff; }
-    .nav-links a:hover::after, .nav-links a.active::after { transform:scaleX(1); }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fff;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
 
     /* ---- Compact page hero ---- */
-    .page-hero { position:relative; text-align:center; padding:52px 0 32px; overflow:hidden; }
-    .page-hero::before, .page-hero::after {
-      content:""; position:absolute; width:420px; height:420px; border-radius:50%;
-      filter:blur(70px); pointer-events:none; animation:drift 12s ease-in-out infinite alternate;
+    .page-hero {
+      position: relative;
+      text-align: center;
+      padding: 52px 0 32px;
+      overflow: hidden;
     }
-    .page-hero::before { background:rgba(255,153,0,.16); top:-160px; left:-120px; }
-    .page-hero::after  { background:rgba(0,168,180,.14); bottom:-200px; right:-140px; animation-delay:4s; }
-    @keyframes drift { from{transform:translate(0,0) scale(1)} to{transform:translate(40px,30px) scale(1.15)} }
+
+    .page-hero::before,
+    .page-hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+
+    .page-hero::before {
+      background: rgba(255, 153, 0, .16);
+      top: -160px;
+      left: -120px;
+    }
+
+    .page-hero::after {
+      background: rgba(0, 168, 180, .14);
+      bottom: -200px;
+      right: -140px;
+      animation-delay: 4s;
+    }
+
+    @keyframes drift {
+      from {
+        transform: translate(0, 0) scale(1)
+      }
+
+      to {
+        transform: translate(40px, 30px) scale(1.15)
+      }
+    }
+
     .page-hero .eyebrow {
-      display:inline-flex; align-items:center; gap:8px; background:rgba(255,153,0,.12);
-      border:1px solid rgba(255,153,0,.35); color:var(--aws-orange);
-      font-size:.78rem; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
-      padding:7px 16px; border-radius:999px; margin-bottom:18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 153, 0, .12);
+      border: 1px solid rgba(255, 153, 0, .35);
+      color: var(--aws-orange);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
     }
+
     .page-hero .eyebrow .dot {
-      width:7px; height:7px; border-radius:50%; background:var(--aws-orange);
-      box-shadow:0 0 8px var(--aws-orange); animation:pulse 2s ease-in-out infinite;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--aws-orange);
+      box-shadow: 0 0 8px var(--aws-orange);
+      animation: pulse 2s ease-in-out infinite;
     }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .35
+      }
+    }
+
     .page-hero h1 {
-      font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.12; color:#fff; font-weight:800;
-      letter-spacing:-.5px; margin-bottom:14px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.12;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: -.5px;
+      margin-bottom: 14px;
     }
+
     .page-hero h1 .grad {
-      background:linear-gradient(90deg, var(--aws-orange), var(--aws-teal));
-      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:var(--aws-orange);
+      background: linear-gradient(90deg, var(--aws-orange), var(--aws-teal));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--aws-orange);
     }
-    .page-hero p.lead { color:var(--aws-muted); max-width:680px; margin:0 auto; font-size:1.05rem; }
-    .pill-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:22px; }
+
+    .page-hero p.lead {
+      color: var(--aws-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    .pill-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
     .pill {
-      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
-      padding:7px 14px; border-radius:999px; font-size:.82rem; color:var(--aws-text-light);
-      transition:transform .2s ease, border-color .2s ease;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: .82rem;
+      color: var(--aws-text-light);
+      transition: transform .2s ease, border-color .2s ease;
     }
-    .pill:hover { transform:translateY(-2px); border-color:rgba(255,153,0,.5); }
+
+    .pill:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 153, 0, .5);
+    }
 
     /* =========================================================
        TWO-COLUMN LAYOUT — sticky TOC + content (fills screen)
     ========================================================= */
     .layout {
-      max-width:1200px; margin:0 auto; padding:10px 24px 60px;
-      display:grid; grid-template-columns: 270px 1fr; gap:34px; align-items:start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 24px 60px;
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 34px;
+      align-items: start;
     }
 
     /* Sticky table of contents */
     .toc {
-      position:sticky; top:88px;
-      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.09);
-      border-left:3px solid var(--aws-orange); border-radius:12px; padding:18px 16px;
-      max-height:calc(100vh - 110px); overflow:auto;
+      position: sticky;
+      top: 88px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .09);
+      border-left: 3px solid var(--aws-orange);
+      border-radius: 12px;
+      padding: 18px 16px;
+      max-height: calc(100vh - 110px);
+      overflow: auto;
     }
+
     .toc-label {
-      font-size:.74rem; font-weight:800; letter-spacing:.4px; text-transform:uppercase;
-      color:var(--aws-orange); margin-bottom:12px; display:flex; align-items:center; gap:7px;
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      color: var(--aws-orange);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
     }
-    .toc-label::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--aws-orange); box-shadow:0 0 8px var(--aws-orange); animation:pulse 2s ease-in-out infinite; }
-    .toc-links { list-style:none; }
-    .toc-links li { margin-bottom:2px; }
+
+    .toc-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--aws-orange);
+      box-shadow: 0 0 8px var(--aws-orange);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .toc-links {
+      list-style: none;
+    }
+
+    .toc-links li {
+      margin-bottom: 2px;
+    }
+
     .toc-links a {
-      display:flex; align-items:center; gap:9px;
-      color:var(--aws-muted); text-decoration:none !important; font-size:.88rem;
-      padding:7px 9px; border-radius:8px; transition:color .18s, background .18s;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--aws-muted);
+      text-decoration: none !important;
+      font-size: .88rem;
+      padding: 7px 9px;
+      border-radius: 8px;
+      transition: color .18s, background .18s;
     }
+
     .toc-links a .tnum {
-      flex:0 0 auto; width:22px; height:22px; border-radius:50%;
-      background:rgba(255,255,255,.08); color:var(--aws-text-light); font-size:.7rem; font-weight:800;
-      display:grid; place-items:center; transition:background .18s, color .18s;
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .08);
+      color: var(--aws-text-light);
+      font-size: .7rem;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      transition: background .18s, color .18s;
     }
-    .toc-links a:hover { color:#fff; background:rgba(255,255,255,.07); }
-    .toc-links a.current { color:#fff; background:rgba(255,153,0,.16); }
-    .toc-links a.current .tnum { background:var(--aws-orange); color:#1a1300; }
-    .toc-cta { margin-top:14px; padding-top:12px; border-top:1px solid rgba(255,255,255,.1); text-align:center; }
+
+    .toc-links a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, .07);
+    }
+
+    .toc-links a.current {
+      color: #fff;
+      background: rgba(255, 153, 0, .16);
+    }
+
+    .toc-links a.current .tnum {
+      background: var(--aws-orange);
+      color: #1a1300;
+    }
+
+    .toc-cta {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      text-align: center;
+    }
+
     .toc-cta a.btn-mini {
-      display:inline-block; background:var(--aws-orange); color:#1a1300;
-      font-size:.8rem; font-weight:800; padding:9px 14px; border-radius:8px; text-decoration:none !important;
-      transition:background .18s, transform .1s;
+      display: inline-block;
+      background: var(--aws-orange);
+      color: #1a1300;
+      font-size: .8rem;
+      font-weight: 800;
+      padding: 9px 14px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      transition: background .18s, transform .1s;
     }
-    .toc-cta a.btn-mini:hover { background:var(--aws-orange-dark); transform:translateY(-1px); }
+
+    .toc-cta a.btn-mini:hover {
+      background: var(--aws-orange-dark);
+      transform: translateY(-1px);
+    }
 
     /* Content column */
-    .legal { display:grid; gap:18px; }
-    .content-card {
-      background:var(--aws-card); color:var(--aws-text-dark); border-radius:var(--radius);
-      border:1px solid var(--aws-border); border-top:3px solid var(--aws-orange);
-      box-shadow:var(--shadow-sm); padding:22px 26px; scroll-margin-top:100px;
-      transition:transform .22s ease, box-shadow .22s ease;
+    .legal {
+      display: grid;
+      gap: 18px;
     }
-    .content-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
-    .content-card h2 { display:flex; align-items:center; gap:12px; font-size:1.14rem; color:var(--aws-text-dark); margin-bottom:12px; }
-    .content-card .sec-ico { font-size:1.15rem; flex:0 0 auto; }
-    .content-card p { margin-bottom:10px; font-size:.96rem; color:#3c4862; }
-    .content-card p:last-child { margin-bottom:0; }
-    .content-card ul { margin:0 0 10px 0; list-style:none; }
-    .content-card ul li { margin-bottom:8px; padding-left:26px; position:relative; font-size:.96rem; color:#3c4862; }
-    .content-card ul li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--aws-orange); font-weight:800; }
-    .content-card a { color:#0b7285; font-weight:600; }
-    .content-card a:hover { text-decoration:underline; }
+
+    .content-card {
+      background: var(--aws-card);
+      color: var(--aws-text-dark);
+      border-radius: var(--radius);
+      border: 1px solid var(--aws-border);
+      border-top: 3px solid var(--aws-orange);
+      box-shadow: var(--shadow-sm);
+      padding: 22px 26px;
+      scroll-margin-top: 100px;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .content-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .content-card h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.14rem;
+      color: var(--aws-text-dark);
+      margin-bottom: 12px;
+    }
+
+    .content-card .sec-ico {
+      font-size: 1.15rem;
+      flex: 0 0 auto;
+    }
+
+    .content-card p {
+      margin-bottom: 10px;
+      font-size: .96rem;
+      color: #3c4862;
+    }
+
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-card ul {
+      margin: 0 0 10px 0;
+      list-style: none;
+    }
+
+    .content-card ul li {
+      margin-bottom: 8px;
+      padding-left: 26px;
+      position: relative;
+      font-size: .96rem;
+      color: #3c4862;
+    }
+
+    .content-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--aws-orange);
+      font-weight: 800;
+    }
+
+    .content-card a {
+      color: #0b7285;
+      font-weight: 600;
+    }
+
+    .content-card a:hover {
+      text-decoration: underline;
+    }
 
     /* ---- Scroll reveal ---- */
-    .reveal { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
-    .reveal.visible { opacity:1; transform:none; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
     /* ---- Footer ---- */
-    footer { border-top:1px solid rgba(255,255,255,.08); padding:32px 0 44px; text-align:center; color:var(--aws-muted); font-size:.88rem; }
-    footer a { color:var(--aws-muted); text-decoration:underline; }
-    footer a:hover { color:var(--aws-orange); }
-    footer .squirrel-mini {
-      width:26px; height:26px; border-radius:6px; background:var(--aws-orange); color:#1a1300;
-      font-weight:900; font-size:.5rem; display:inline-grid; place-items:center; margin-bottom:8px;
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 32px 0 44px;
+      text-align: center;
+      color: var(--aws-muted);
+      font-size: .88rem;
     }
-    .foot-links { margin-top:10px; }
+
+    footer a {
+      color: var(--aws-muted);
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: var(--aws-orange);
+    }
+
+    footer .squirrel-mini {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: var(--aws-orange);
+      color: #1a1300;
+      font-weight: 900;
+      font-size: .5rem;
+      display: inline-grid;
+      place-items: center;
+      margin-bottom: 8px;
+    }
+
+    .foot-links {
+      margin-top: 10px;
+    }
 
     /* Reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      *, *::before, *::after { animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important; }
-      .reveal { opacity:1; transform:none; }
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001s !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* Responsive — collapse TOC under the hero on tablet/mobile */
-    @media (max-width:960px){
-      .layout { grid-template-columns:1fr; gap:22px; }
-      .toc { position:static; max-height:none; overflow:visible; }
-      .toc-links { display:flex; flex-wrap:wrap; gap:4px; }
-      .toc-links li { margin-bottom:0; }
-      .toc-links a { padding:6px 10px; font-size:.84rem; }
-      .toc-cta { display:none; }
-    }
-    @media (max-width:600px){
-      .nav-links a { margin-left:12px; font-size:.85rem; }
-      .content-card { padding:18px 18px; }
-    }
-  
-    .footer-grid {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; text-align:left;
-      margin-bottom:30px;
-    }
-    .footer-col h4 {
-      color:#fff; font-size:.95rem; margin-bottom:12px; font-weight:800;
-    }
-    .footer-col ul { list-style:none; padding:0; margin:0; }
-    .footer-col li { margin-bottom:8px; }
-    .footer-col a { color:var(--aws-muted); font-size:.88rem; text-decoration:none; }
-    .footer-col a:hover { color:var(--aws-orange); text-decoration:underline; }
+    @media (max-width:960px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
 
+      .toc {
+        position: static;
+        max-height: none;
+        overflow: visible;
+      }
+
+      .toc-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .toc-links li {
+        margin-bottom: 0;
+      }
+
+      .toc-links a {
+        padding: 6px 10px;
+        font-size: .84rem;
+      }
+
+      .toc-cta {
+        display: none;
+      }
+    }
+
+    @media (max-width:600px) {
+      .nav-links a {
+        margin-left: 12px;
+        font-size: .85rem;
+      }
+
+      .content-card {
+        padding: 18px 18px;
+      }
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: .95rem;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a {
+      color: var(--aws-muted);
+      font-size: .88rem;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      color: var(--aws-orange);
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- ================= HEADER ================= -->
@@ -288,7 +708,8 @@
   <section class="page-hero container">
     <div class="eyebrow"><span class="dot"></span> Privacy Policy</div>
     <h1>Your files <span class="grad">never leave</span> your device.</h1>
-    <p class="lead">Privacy matters to every game developer. This page explains exactly what the Bulk WebP to ICO converter does and doesn't track, and how Google AdSense advertising cookies work.</p>
+    <p class="lead">Privacy matters to every game developer. This page explains exactly what the Bulk WebP to ICO
+      converter does and doesn't track, and how Google AdSense advertising cookies work.</p>
     <div class="pill-row">
       <span class="pill">🔒 100% Local Processing</span>
       <span class="pill">🍪 Ad-Serving Cookies</span>
@@ -321,53 +742,70 @@
     <main class="legal">
       <div class="content-card reveal" id="privacy-1">
         <h2><span class="sec-ico">🔒</span> 1. Your Files Are Processed Locally — We Never See Them</h2>
-        <p>Thank you for using the <strong>Bulk WebP to ICO Converter</strong>. The core feature of this tool is that it runs <strong>entirely inside your web browser</strong> using the HTML5 Canvas API and the JSZip library. When you convert WebP images to ICO icons:</p>
+        <p>Thank you for using the <strong>Bulk WebP to ICO Converter</strong>. The core feature of this tool is that it
+          runs <strong>entirely inside your web browser</strong> using the HTML5 Canvas API and the JSZip library. When
+          you convert WebP images to ICO icons:</p>
         <ul>
           <li>Your files are read from your device, then converted, resized, and packaged locally on your computer.</li>
           <li><strong>No image data is ever uploaded, transmitted, stored, or shared with any server.</strong></li>
           <li>There is no backend database and no file retention.</li>
         </ul>
-        <p>Because all processing is client-side, the site operators cannot access, view, or store any of the images you convert — so even unreleased or confidential game assets stay completely private.</p>
+        <p>Because all processing is client-side, the site operators cannot access, view, or store any of the images you
+          convert — so even unreleased or confidential game assets stay completely private.</p>
       </div>
 
       <div class="content-card reveal" id="privacy-2">
         <h2><span class="sec-ico">🚫</span> 2. Information We Do Not Collect</h2>
-        <p>We do not require registration, login, or email sign-up. We do not collect your name, email address, phone number, or postal address. We do not collect or upload your image files.</p>
+        <p>We do not require registration, login, or email sign-up. We do not collect your name, email address, phone
+          number, or postal address. We do not collect or upload your image files.</p>
       </div>
 
       <div class="content-card reveal" id="privacy-3">
         <h2><span class="sec-ico">🍪</span> 3. Google AdSense &amp; Advertising Cookies</h2>
-        <p>This website is free to use and may be monetized through display advertising served by <strong>Google AdSense</strong>. When advertising is active, Google and its partners may use cookies (including the DoubleClick cookie) and other tracking technologies to serve and personalize advertisements based on your visits to this and other websites.</p>
+        <p>This website is free to use and may be monetized through display advertising served by <strong>Google
+            AdSense</strong>. When advertising is active, Google and its partners may use cookies (including the
+          DoubleClick cookie) and other tracking technologies to serve and personalize advertisements based on your
+          visits to this and other websites.</p>
         <ul>
           <li><strong>Google AdSense</strong> uses cookies to deliver and measure ads.</li>
-          <li><strong>Third-party vendors</strong>, including Google, may use cookies to serve ads based on your previous visits to this website or other sites.</li>
-          <li>Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites.</li>
+          <li><strong>Third-party vendors</strong>, including Google, may use cookies to serve ads based on your
+            previous visits to this website or other sites.</li>
+          <li>Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this
+            site and/or other sites.</li>
         </ul>
       </div>
 
       <div class="content-card reveal" id="privacy-4">
         <h2><span class="sec-ico">📊</span> 4. Google Analytics</h2>
-        <p>We may use Google Analytics to understand how visitors use our site so we can improve it. It collects anonymized information such as pages visited, time on site, browser type, and general geographic region via cookies and JavaScript tags. You can learn more in Google's own privacy policy.</p>
+        <p>We may use Google Analytics to understand how visitors use our site so we can improve it. It collects
+          anonymized information such as pages visited, time on site, browser type, and general geographic region via
+          cookies and JavaScript tags. You can learn more in Google's own privacy policy.</p>
       </div>
 
       <div class="content-card reveal" id="privacy-5">
         <h2><span class="sec-ico">⚖️</span> 5. Your Choices &amp; Opting Out</h2>
-        <p>You can opt out of personalized advertising at any time by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. You can also manage or block cookies through your browser settings. For more about opting out of third-party vendors' cookies, visit <a href="https://www.aboutads.info" target="_blank" rel="noopener">www.aboutads.info</a>.</p>
+        <p>You can opt out of personalized advertising at any time by visiting <a
+            href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. You can
+          also manage or block cookies through your browser settings. For more about opting out of third-party vendors'
+          cookies, visit <a href="https://www.aboutads.info" target="_blank" rel="noopener">www.aboutads.info</a>.</p>
       </div>
 
       <div class="content-card reveal" id="privacy-6">
         <h2><span class="sec-ico">🛡️</span> 6. Do Not Track</h2>
-        <p>Some browsers offer a "Do Not Track" (DNT) signal. Because industry standards are still evolving, we do not currently respond to browser DNT signals, though you can use the opt-out tools described above.</p>
+        <p>Some browsers offer a "Do Not Track" (DNT) signal. Because industry standards are still evolving, we do not
+          currently respond to browser DNT signals, though you can use the opt-out tools described above.</p>
       </div>
 
       <div class="content-card reveal" id="privacy-7">
         <h2><span class="sec-ico">🧒</span> 7. Children's Privacy</h2>
-        <p>This website is a general utility intended for all users, including adult game developers. It is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+        <p>This website is a general utility intended for all users, including adult game developers. It is not directed
+          at children under 13, and we do not knowingly collect personal information from children.</p>
       </div>
 
       <div class="content-card reveal" id="privacy-8">
         <h2><span class="sec-ico">📅</span> 8. Changes to This Policy</h2>
-        <p>We may update this policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Continued use of the site following changes constitutes acceptance of the revised policy.</p>
+        <p>We may update this policy from time to time. Any changes will be posted on this page with an updated "Last
+          updated" date. Continued use of the site following changes constitutes acceptance of the revised policy.</p>
       </div>
     </main>
   </div>
@@ -383,7 +821,8 @@
             <strong style="color:#fff; font-size:1.05rem;">WebP to ICO</strong>
           </div>
           <p style="font-size:.85rem; color:var(--aws-muted); line-height:1.5;">
-            The 100% private, client-side icon and favicon suite for developers, designers, and game creators. No uploads, no subscriptions.
+            The 100% private, client-side icon and favicon suite for developers, designers, and game creators. No
+            uploads, no subscriptions.
           </p>
         </div>
         <div class="footer-col">
@@ -415,7 +854,8 @@
         </div>
       </div>
       <div style="border-top:1px solid rgba(255,255,255,.08); padding-top:20px;">
-        <p style="font-size:.82rem; color:var(--aws-muted);">© 2026 WebP to ICO Converter (webp2ico.com). All processing is executed client-side via HTML5 Canvas API &amp; Web Workers.</p>
+        <p style="font-size:.82rem; color:var(--aws-muted);">© 2026 WebP to ICO Converter (webp2ico.com). All processing
+          is executed client-side via HTML5 Canvas API &amp; Web Workers.</p>
       </div>
     </div>
 
@@ -423,36 +863,37 @@
 
   <script>
     /* Scroll-reveal */
-    (function initReveal(){
+    (function initReveal() {
       var els = document.querySelectorAll('.reveal');
       if (!els.length) return;
-      if (!('IntersectionObserver' in window)){ els.forEach(function(el){ el.classList.add('visible'); }); return; }
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
-      }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
-      els.forEach(function(el){ io.observe(el); });
+      if (!('IntersectionObserver' in window)) { els.forEach(function (el) { el.classList.add('visible'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+      }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
     })();
 
     /* Scroll-spy: highlight the current section in the TOC */
-    (function initSpy(){
+    (function initSpy() {
       var links = document.querySelectorAll('.toc-links a');
       if (!links.length || !('IntersectionObserver' in window)) return;
       var sections = [];
-      links.forEach(function(a){
+      links.forEach(function (a) {
         var id = a.getAttribute('href').slice(1);
         var el = document.getElementById(id);
         if (el) sections.push({ el: el, link: a });
       });
-      var spy = new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
           if (!en.isIntersecting) return;
-          links.forEach(function(l){ l.classList.remove('current'); });
-          var hit = sections.find(function(s){ return s.el === en.target; });
+          links.forEach(function (l) { l.classList.remove('current'); });
+          var hit = sections.find(function (s) { return s.el === en.target; });
           if (hit) hit.link.classList.add('current');
         });
-      }, { rootMargin:'-20% 0px -70% 0px', threshold:0 });
-      sections.forEach(function(s){ spy.observe(s.el); });
+      }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+      sections.forEach(function (s) { spy.observe(s.el); });
     })();
   </script>
 </body>
+
 </html>
